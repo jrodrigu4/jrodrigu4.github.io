@@ -197,2007 +197,592 @@ let mic;
 
     // Figures irregulars per a cada sentiment
     function figuraFelic(intensity) {
-   r = map(intensity, 0, 1, 255, 255);
-   g = map(intensity, 0, 1, 255, 255);
-   b = map(intensity, 0, 1, 255, 0);
-   r2 = map(intensity, 1, 0, 255, 255);
-   g2 = map(intensity, 1, 0, 255, 255);
-   b2 = map(intensity, 1, 0, 255, 0);
-   s = map(intensity, 0.5,1, 0, 7)
+function setup() {
+  createCanvas(1000, 1000);
+}
+
+function draw() {
+  background(220);
+  sinus=sin(frameCount*0.02)*20;
 
 
-  background(r2, g2, b2);
+beginShape();//contorn general
+ fill (87, 134, 43)
+curveVertex(406.5, 146.609375);
+curveVertex(426.5, 137.609375);
+curveVertex(443.5, 132.609375);
+curveVertex(462.5, 131.609375);
+curveVertex(490.5, 130.609375);
+curveVertex(521.5, 134.609375);
+curveVertex(558.5, 149.609375);
+curveVertex(574.5, 162.609375);
+curveVertex(598.5, 188.609375);
+curveVertex(607.5, 212.609375);
+curveVertex(615.5, 237.609375);
+curveVertex(621.5, 263.609375);
+curveVertex(624.5, 283.609375);
+curveVertex(631.5, 302.609375);
+curveVertex(635.5, 322.609375);
+curveVertex(644.5, 336.609375);
+curveVertex(652.5, 353.609375);
+curveVertex(662.5, 367.609375);
+curveVertex(674.5, 384.609375);
+curveVertex(687.5, 398.609375);
+curveVertex(702.5, 426.609375);
+curveVertex(711.5, 448.609375);
+curveVertex(718.5, 472.609375);
+curveVertex(719.5, 492.609375);
+curveVertex(719.5, 514.609375);
+curveVertex(718.5, 539.609375);
+curveVertex(717.5, 555.609375);
+curveVertex(709.5, 570.609375);
+curveVertex(703.5, 592.609375);
+curveVertex(691.5, 609.609375);
+curveVertex(672.5, 629.609375);
+curveVertex(654.5, 644.609375);
+curveVertex(634.5, 653.609375);
+curveVertex(599.5, 665.609375);
+curveVertex(570.5, 672.609375);
+curveVertex(540.5, 679.609375);
+curveVertex(500.5, 680.609375);
+curveVertex(477.5, 681.609375);
+curveVertex(435.5, 682.609375);
+curveVertex(402.5, 677.609375);
+curveVertex(367.5, 669.609375);
+curveVertex(340.5, 656.609375);
+curveVertex(321.5, 644.609375);
+curveVertex(303.5, 629.609375);
+curveVertex(284.5, 605.609375);
+curveVertex(272.5, 581.609375);
+curveVertex(264.5, 556.609375);
+curveVertex(260.5, 532.609375);
+curveVertex(261.5, 505.609375);
+curveVertex(264.5, 481.609375);
+curveVertex(271.5, 455.609375);
+curveVertex(278.5, 437.609375);
+curveVertex(266.5, 449.609375);
+curveVertex(257.5, 463.609375);
+curveVertex(243.5, 483.609375);
+curveVertex(229.5, 506.609375);
+curveVertex(219.5, 528.609375);
+curveVertex(215.5, 546.609375);
+curveVertex(215.5, 570.609375);
+curveVertex(226.5, 585.609375);
+curveVertex(240.5, 592.609375);
+curveVertex(252.5, 580.609375);
+curveVertex(261.5, 564.609375);
+curveVertex(264.5, 558.609375);
+curveVertex(262.5, 533.609375);
+curveVertex(258.5, 504.609375);
+curveVertex(264.5, 478.609375);
+curveVertex(272.5, 452.609375);
+curveVertex(278.5, 434.609375);
+curveVertex(285.5, 420.609375);
+curveVertex(294.5, 408.609375);
+curveVertex(305.5, 398.609375);
+curveVertex(314.5, 383.609375);
+curveVertex(323.5, 366.609375);
+curveVertex(330.5, 349.609375);
+curveVertex(338.5, 320.609375);
+curveVertex(341.5, 303.609375);
+curveVertex(344.5, 284.609375);
+curveVertex(350.5, 259.609375);
+curveVertex(350.5, 250.609375);
+curveVertex(352.5, 229.609375);
+curveVertex(356.5, 209.609375);
+curveVertex(365.5, 188.609375);
+curveVertex(377.5, 169.609375);
+curveVertex(395.5, 154.609375);
+curveVertex(408.5, 144.609375);
+endShape(CLOSE);
 
-// Cos
-  stroke(0);
-beginShape();
-  fill(r, g, b)
-curveVertex(277, 201.1875);
-curveVertex(282, 239.1875);
-curveVertex(282, 244.1875);
-curveVertex(275, 248.1875);
-curveVertex(252, 266.1875);
-curveVertex(223, 288.1875);
-curveVertex(211, 298.1875);
-curveVertex(202, 309.1875);
-curveVertex(206, 331.1875);
-curveVertex(226, 354.1875);
-curveVertex(264, 369.1875);
-curveVertex(316, 372.1875);
-curveVertex(397, 328.1875);
-curveVertex(400, 290.1875);
-curveVertex(385, 222.1875);
-curveVertex(364, 192.1875);
-curveVertex(337, 179.1875);
-curveVertex(306, 189.1875);
-curveVertex(287, 195.1875);
-endShape(CLOSE);
-  
-// Cara
-beginShape();
-curveVertex(239, 64.1875);
-curveVertex(235, 93.1875);
-curveVertex(233, 115.1875);
-curveVertex(234, 135.1875);
-curveVertex(236, 157.1875);
-curveVertex(242, 176.1875);
-curveVertex(249, 191.1875);
-curveVertex(261, 204.1875);
-curveVertex(277, 215.1875);
-curveVertex(305, 215.1875);
-curveVertex(332, 205.1875);
-curveVertex(346, 194.1875);
-curveVertex(371, 159.1875);
-curveVertex(373, 98.1875);
-curveVertex(358, 54.1875);
-curveVertex(327, 34.1875);
-curveVertex(299, 30.1875);
-curveVertex(271, 34.1875);
-curveVertex(253, 41.1875);
-curveVertex(237, 61.1875);
+beginShape();//contorn interior
+fill(222, 222, 124)
+vertex(448.5, 132.609375);
+vertex(460.5, 132.609375);
+vertex(473.5, 135.609375);
+vertex(492.5, 141.609375);
+vertex(511.5, 149.609375);
+vertex(532.5, 163.609375);
+vertex(542.5, 174.609375);
+vertex(554.5, 194.609375);
+vertex(563.5, 220.609375);
+vertex(564.5, 241.609375);
+vertex(564.5, 258.609375);
+vertex(568.5, 281.609375);
+vertex(572.5, 305.609375);
+vertex(577.5, 332.609375);
+vertex(584.5, 353.609375);
+vertex(595.5, 373.609375);
+vertex(611.5, 400.609375);
+vertex(624.5, 416.609375);
+vertex(636.5, 439.609375);
+vertex(645.5, 461.609375);
+vertex(651.5, 486.609375);
+vertex(653.5, 505.609375);
+vertex(654.5, 529.609375);
+vertex(653.5, 546.609375);
+vertex(649.5, 564.609375);
+vertex(642.5, 583.609375);
+vertex(633.5, 600.609375);
+vertex(622.5, 614.609375);
+vertex(611.5, 628.609375);
+vertex(595.5, 643.609375);
+vertex(576.5, 658.609375);
+vertex(551.5, 667.609375);
+vertex(533.5, 673.609375);
+vertex(485.5, 677.609375);
+vertex(455.5, 677.609375);
+vertex(418.5, 676.609375);
+vertex(375.5, 666.609375);
+vertex(350.5, 658.609375);
+vertex(330.5, 646.609375);
+vertex(304.5, 627.609375);
+vertex(296.5, 613.609375);
+vertex(286.5, 597.609375);
+vertex(278.5, 584.609375);
+vertex(272.5, 565.609375);
+vertex(267.5, 554.609375);
+vertex(266.5, 535.609375);
+vertex(265.5, 515.609375);
+vertex(265.5, 490.609375);
+vertex(269.5, 469.609375);
+vertex(275.5, 449.609375);
+vertex(286.5, 424.609375);
+vertex(300.5, 401.609375);
+vertex(314.5, 380.609375);
+vertex(325.5, 360.609375);
+vertex(331.5, 347.609375);
+vertex(350.5, 249.609375);
+vertex(350.5, 228.609375);
+vertex(355.5, 209.609375);
+vertex(366.5, 185.609375);
+vertex(384.5, 162.609375);
+vertex(409.5, 145.609375);
+vertex(429.5, 135.609375);
+vertex(449.5, 131.609375);
+endShape();
+
+beginShape();//braç esquerre
+  fill(98, 150, 55)
+curveVertex(635.5, 385.609375);
+curveVertex(646.5, 386.609375);
+curveVertex(658.5, 400.609375);
+curveVertex(671.5, 418.609375);
+curveVertex(681.5, 432.609375);
+curveVertex(695.5, 454.609375);
+curveVertex(707.5, 473.609375);
+curveVertex(718.5, 492.609375);
+curveVertex(724.5, 511.609375);
+curveVertex(731.5, 536.609375);
+curveVertex(731.5, 562.609375);
+curveVertex(721.5, 573.609375);
+curveVertex(706.5, 571.609375);
+curveVertex(694.5, 557.609375);
+curveVertex(680.5, 532.609375);
+curveVertex(669.5, 505.609375);
+curveVertex(659.5, 476.609375);
+curveVertex(649.5, 451.609375);
+curveVertex(641.5, 422.609375);
+curveVertex(635.5, 398.609375);
+curveVertex(635.5, 382.609375);
 endShape(CLOSE);
 
-// Ropa exterior
-beginShape();
-curveVertex(408, 285.1875);
-curveVertex(380, 294.1875);
-curveVertex(362, 310.1875);
-curveVertex(349, 323.1875);
-curveVertex(332, 342.1875);
-curveVertex(329, 349.1875);
-curveVertex(328, 352.1875);
-curveVertex(323, 352.1875);
-curveVertex(296, 353.1875);
-curveVertex(275, 351.1875);
-curveVertex(255, 345.1875);
-curveVertex(240, 338.1875);
-curveVertex(226, 326.1875);
-curveVertex(220, 314.1875);
-curveVertex(216, 303.1875);
-curveVertex(212, 295.1875);
-curveVertex(212, 286.1875);
-curveVertex(208, 285.1875);
-curveVertex(203, 288.1875);
-curveVertex(187, 302.1875);
-curveVertex(176, 313.1875);
-curveVertex(170, 321.1875);
-curveVertex(169, 329.1875);
-curveVertex(168, 331.1875);
-curveVertex(164, 334.1875);
-curveVertex(153, 339.1875);
-curveVertex(149, 347.1875);
-curveVertex(146, 356.1875);
-curveVertex(145, 370.1875);
-curveVertex(144, 380.1875);
-curveVertex(144, 390.1875);
-curveVertex(143, 393.1875);
-curveVertex(140, 395.1875);
-curveVertex(132, 398.1875);
-curveVertex(127, 404.1875);
-curveVertex(124, 411.1875);
-curveVertex(123, 419.1875);
-curveVertex(122, 424.1875);
-curveVertex(119, 425.1875);
-curveVertex(113, 427.1875);
-curveVertex(102, 433.1875);
-curveVertex(92, 443.1875);
-curveVertex(86, 453.1875);
-curveVertex(79, 468.1875);
-curveVertex(75, 480.1875);
-curveVertex(72, 494.1875);
-curveVertex(69, 508.1875);
-curveVertex(65, 523.1875);
-curveVertex(65, 538.1875);
-curveVertex(69, 546.1875);
-curveVertex(72, 555.1875);
-curveVertex(68, 565.1875);
-curveVertex(59, 579.1875);
-curveVertex(49, 592.1875);
-curveVertex(46, 599.1875);
-curveVertex(46, 599.1875);
-curveVertex(543, 599.1875);
-curveVertex(542, 598.1875);
-curveVertex(542, 572.1875);
-curveVertex(540, 549.1875);
-curveVertex(535, 526.1875);
-curveVertex(530, 498.1875);
-curveVertex(529, 470.1875);
-curveVertex(526, 444.1875);
-curveVertex(517, 422.1875);
-curveVertex(506, 399.1875);
-curveVertex(506, 395.1875);
-curveVertex(508, 370.1875);
-curveVertex(505, 357.1875);
-curveVertex(492, 334.1875);
-curveVertex(481, 317.1875);
-curveVertex(467, 302.1875);
-curveVertex(449, 289.1875);
-curveVertex(427, 284.1875);
-curveVertex(416, 284.1875);
+beginShape();//os
+  fill(173, 118, 62)
+curveVertex(443.5, 410.609375);
+curveVertex(423.5, 412.609375);
+curveVertex(403.5, 422.609375);
+curveVertex(387.5, 436.609375);
+curveVertex(371.5, 454.609375);
+curveVertex(363.5, 470.609375);
+curveVertex(356.5, 489.609375);
+curveVertex(354.5, 509.609375);
+curveVertex(356.5, 531.609375);
+curveVertex(362.5, 552.609375);
+curveVertex(373.5, 568.609375);
+curveVertex(385.5, 586.609375);
+curveVertex(396.5, 596.609375);
+curveVertex(414.5, 608.609375);
+curveVertex(433.5, 615.609375);
+curveVertex(449.5, 617.609375);
+curveVertex(471.5, 617.609375);
+curveVertex(488.5, 613.609375);
+curveVertex(508.5, 603.609375);
+curveVertex(525.5, 586.609375);
+curveVertex(541.5, 571.609375);
+curveVertex(550.5, 550.609375);
+curveVertex(556.5, 532.609375);
+curveVertex(556.5, 516.609375);
+curveVertex(554.5, 498.609375);
+curveVertex(549.5, 480.609375);
+curveVertex(543.5, 463.609375);
+curveVertex(531.5, 444.609375);
+curveVertex(516.5, 429.609375);
+curveVertex(498.5, 417.609375);
+curveVertex(477.5, 409.609375);
+curveVertex(457.5, 409.609375);
+curveVertex(442.5, 410.609375);
 endShape(CLOSE);
-  
-// Pelo
-beginShape();
-curveVertex(239, 77.1875);
-curveVertex(237, 92.1875);
-curveVertex(237, 104.1875);
-curveVertex(236, 117.1875);
-curveVertex(236, 131.1875);
-curveVertex(237, 142.1875);
-curveVertex(238, 154.1875);
-curveVertex(243, 171.1875);
-curveVertex(248, 181.1875);
-curveVertex(255, 193.1875);
-curveVertex(263, 203.1875);
-curveVertex(266, 217.1875);
-curveVertex(265, 227.1875);
-curveVertex(260, 235.1875);
-curveVertex(267, 241.1875);
-curveVertex(268, 252.1875);
-curveVertex(256, 263.1875);
-curveVertex(248, 272.1875);
-curveVertex(249, 282.1875);
-curveVertex(244, 289.1875);
-curveVertex(237, 292.1875);
-curveVertex(235, 298.1875);
-curveVertex(238, 304.1875);
-curveVertex(239, 311.1875);
-curveVertex(236, 317.1875);
-curveVertex(229, 318.1875);
-curveVertex(228, 313.1875);
-curveVertex(227, 309.1875);
-curveVertex(220, 306.1875);
-curveVertex(213, 304.1875);
-curveVertex(210, 296.1875);
-curveVertex(211, 288.1875);
-curveVertex(207, 282.1875);
-curveVertex(206, 275.1875);
-curveVertex(213, 266.1875);
-curveVertex(210, 258.1875);
-curveVertex(214, 247.1875);
-curveVertex(210, 237.1875);
-curveVertex(217, 225.1875);
-curveVertex(212, 214.1875);
-curveVertex(219, 198.1875);
-curveVertex(212, 189.1875);
-curveVertex(218, 171.1875);
-curveVertex(208, 156.1875);
-curveVertex(218, 144.1875);
-curveVertex(216, 136.1875);
-curveVertex(213, 124.1875);
-curveVertex(219, 110.1875);
-curveVertex(215, 93.1875);
-curveVertex(226, 81.1875);
-curveVertex(224, 67.1875);
-curveVertex(231, 54.1875);
-curveVertex(244, 39.1875);
-curveVertex(260, 23.1875);
-curveVertex(274, 15.1875);
-curveVertex(293, 9.1875);
-curveVertex(315, 9.1875);
-curveVertex(338, 14.1875);
-curveVertex(350, 19.1875);
-curveVertex(360, 25.1875);
-curveVertex(368, 33.1875);
-curveVertex(377, 41.1875);
-curveVertex(383, 52.1875);
-curveVertex(387, 62.1875);
-curveVertex(391, 74.1875);
-curveVertex(394, 90.1875);
-curveVertex(395, 105.1875);
-curveVertex(396, 118.1875);
-curveVertex(401, 130.1875);
-curveVertex(405, 141.1875);
-curveVertex(401, 156.1875);
-curveVertex(412, 172.1875);
-curveVertex(415, 179.1875);
-curveVertex(410, 201.1875);
-curveVertex(410, 208.1875);
-curveVertex(418, 225.1875);
-curveVertex(420, 238.1875);
-curveVertex(434, 247.1875);
-curveVertex(436, 258.1875);
-curveVertex(435, 266.1875);
-curveVertex(437, 274.1875);
-curveVertex(441, 281.1875);
-curveVertex(436, 284.1875);
-curveVertex(419, 284.1875);
-curveVertex(401, 286.1875);
-curveVertex(386, 292.1875);
-curveVertex(373, 303.1875);
-curveVertex(360, 314.1875);
-curveVertex(351, 320.1875);
-curveVertex(350, 307.1875);
-curveVertex(344, 294.1875);
-curveVertex(354, 278.1875);
-curveVertex(348, 264.1875);
-curveVertex(356, 246.1875);
-curveVertex(345, 235.1875);
-curveVertex(352, 214.1875);
-curveVertex(342, 193.1875);
-curveVertex(350, 176.1875);
-curveVertex(350, 167.1875);
-curveVertex(339, 152.1875);
-curveVertex(337, 142.1875);
-curveVertex(350, 116.1875);
-curveVertex(344, 108.1875);
-curveVertex(343, 99.1875);
-curveVertex(347, 83.1875);
-curveVertex(341, 70.1875);
-curveVertex(332, 60.1875);
-curveVertex(320, 55.1875);
-curveVertex(305, 50.1875);
-curveVertex(288, 47.1875);
-curveVertex(273, 48.1875);
-curveVertex(259, 51.1875);
-curveVertex(249, 56.1875);
-curveVertex(242, 64.1875);
+
+beginShape();//ull dret
+  fill(255, 252, 243)
+curveVertex(348.5, 253.609375);//he tret 10 numeros a la segona columna de numeros.
+curveVertex(335.5, 260.609375);
+curveVertex(324.5, 271.609375);
+curveVertex(317.5, 284.609375);
+curveVertex(314.5, 299.609375);
+curveVertex(314.5, 317.609375);
+curveVertex(319.5, 327.609375);
+curveVertex(330.5, 341.609375);
+curveVertex(340.5, 350.609375);
+curveVertex(354.5, 360.609375);
+curveVertex(370.5, 362.609375);
+curveVertex(384.5, 360.609375);
+curveVertex(398.5, 353.609375);
+curveVertex(414.5, 341.609375);
+curveVertex(424.5, 324.609375);
+curveVertex(427.5, 311.609375);
+curveVertex(427.5, 293.609375);
+curveVertex(419.5, 275.609375);
+curveVertex(404.5, 258.609375);
+curveVertex(388.5, 250.609375);
+curveVertex(368.5, 249.609375);
+curveVertex(348.5, 249.609375);
 endShape(CLOSE);
-  
-// NARIZ
+
+beginShape();//ull esquerre
+  fill(255, 252, 243)
+curveVertex(508.5, 249.609375);
+curveVertex(492.5, 254.609375);
+curveVertex(478.5, 263.609375);
+curveVertex(469.5, 274.609375);
+curveVertex(463.5, 287.609375);
+curveVertex(459.5, 300.609375);
+curveVertex(459.5, 312.609375);
+curveVertex(462.5, 324.609375);
+curveVertex(467.5, 335.609375);
+curveVertex(477.5, 346.609375);
+curveVertex(490.5, 355.609375);
+curveVertex(503.5, 361.609375);
+curveVertex(519.5, 363.609375);
+curveVertex(536.5, 360.609375);
+curveVertex(547.5, 352.609375);
+curveVertex(560.5, 342.609375);
+curveVertex(569.5, 324.609375);
+curveVertex(571.5, 308.609375);
+curveVertex(569.5, 290.609375);
+curveVertex(565.5, 274.609375);
+curveVertex(555.5, 264.609375);
+curveVertex(545.5, 255.609375);
+curveVertex(536.5, 251.609375);
+curveVertex(525.5, 249.609375);
+curveVertex(512.5, 250.609375);
+endShape(CLOSE);
+
+beginShape();//boca
+  fill(0, 0, 0)
 beginShape();
-vertex(264.01171875, 155.69921875);
-bezierVertex(264.01171875, 158.69921875, 266.01171875, 160.69921875, 268.01171875, 162.69921875);
-bezierVertex(272.01171875, 163.69921875, 275.01171875, 164.69921875, 277.01171875, 164.69921875);
-bezierVertex(280.01171875, 163.69921875, 282.01171875, 162.69921875, 283.01171875, 162.69921875);
-bezierVertex(285.01171875, 162.69921875, 286.01171875, 162.69921875, 287.01171875, 162.69921875);
-bezierVertex(288.01171875, 161.69921875, 288.01171875, 160.69921875, 288.01171875, 158.69921875);
+vertex(417.5, 379.609375+sinus/3);
+vertex(419.5, 382.609375+sinus/3);
+vertex(421.5, 384.609375+sinus/3);
+vertex(425.5, 385.609375+sinus/3);
+vertex(429.5, 386.609375+sinus/3);
+vertex(433.5, 386.609375+sinus/3);
+vertex(438.5, 386.609375+sinus/3);
+vertex(443.5, 386.609375+sinus/3);
+vertex(447.5, 386.609375+sinus/3);
+vertex(452.5, 385.609375+sinus/3);
+vertex(456.5, 384.609375+sinus/3);
+vertex(458.5, 383.609375+sinus/3);
+vertex(460.5, 379.609375+sinus/3);
 endShape();
   
-  // OJO izquierdo
-  fill(255);
-beginShape();
-vertex(244, 119.1875);//Extremo izquierdo
-vertex(248, 122.1875);
-vertex(254, 123.1875);
-vertex(261, 122.1875);
-vertex(265, 119.1875);//Extremo derecho
-vertex(261, 115.1875+(s/2));
-vertex(255, 113.1875+s);
-vertex(247, 115.1875+(s/2));
-endShape(CLOSE);
-  
-// OJO derecha
-beginShape();
-vertex(318, 118.1875);//Extremo derecho
-vertex(313, 122.1875);
-vertex(304, 123.1875);
-vertex(296, 122.1875);
-vertex(293, 120.1875);//Extremo izquierdo
-vertex(298, 115.1875+(s/2));
-vertex(305, 112.1875+s);
-vertex(313, 113.1875+s);
-endShape(CLOSE);
+beginShape();//cella esquerre
+  fill(0, 0, 0)
+curveVertex(504.5, 195.609375+sinus);
+curveVertex(509.5, 208.609375+sinus);
+curveVertex(518.5, 220.609375+sinus);
+curveVertex(531.5, 230.609375+sinus);
+curveVertex(546.5, 237.609375+sinus);
+curveVertex(559.5, 241.609375+sinus);
+curveVertex(573.5, 242.609375+sinus);
+endShape();
 
-// Boca
-beginShape();
-vertex(261, 176.1875-s);
-vertex(270, 177.1875);
-vertex(279, 177.1875);
-vertex(295, 176.1875-s);
+beginShape();//cella dreta
+  fill(0, 0, 0)
+curveVertex(315.5, 241.609375+sinus);
+curveVertex(326.5, 241.609375+sinus);
+curveVertex(338.5, 241.609375+sinus);
+curveVertex(348.5, 239.609375+sinus);
+curveVertex(360.5, 233.609375+sinus);
+curveVertex(369.5, 225.609375+sinus);
+curveVertex(376.5, 215.609375+sinus);
+curveVertex(383.5, 201.609375+sinus);
+endShape();
+
+beginShape();//cama dreta
+  fill(87, 134, 43)
+curveVertex(397.5, 652.609375);
+curveVertex(395.5, 665.609375);
+curveVertex(395.5, 677.609375);
+curveVertex(394.5, 693.609375);
+curveVertex(393.5, 708.609375);
+curveVertex(394.5, 727.609375);
+curveVertex(387.5, 727.609375);
+curveVertex(382.5, 732.609375);
+curveVertex(381.5, 738.609375);
+curveVertex(381.5, 753.609375);
+curveVertex(378.5, 770.609375);
+curveVertex(385.5, 773.609375);
+curveVertex(393.5, 778.609375);
+curveVertex(398.5, 780.609375);
+curveVertex(388.5, 777.609375);
+curveVertex(377.5, 774.609375);
+curveVertex(367.5, 774.609375);
+curveVertex(359.5, 781.609375);
+curveVertex(351.5, 789.609375);
+curveVertex(351.5, 799.609375);
+curveVertex(352.5, 808.609375);
+curveVertex(359.5, 815.609375);
+curveVertex(366.5, 820.609375);
+curveVertex(377.5, 827.609375);
+curveVertex(391.5, 828.609375);
+curveVertex(402.5, 828.609375);
+curveVertex(416.5, 828.609375);
+curveVertex(430.5, 825.609375);
+curveVertex(444.5, 820.609375);
+curveVertex(453.5, 811.609375);
+curveVertex(453.5, 793.609375);
+curveVertex(450.5, 781.609375);
+curveVertex(447.5, 765.609375);
+curveVertex(438.5, 752.609375);
+curveVertex(440.5, 742.609375);
+curveVertex(440.5, 731.609375);
+curveVertex(433.5, 725.609375);
+curveVertex(430.5, 716.609375);
+curveVertex(429.5, 706.609375);
+curveVertex(429.5, 696.609375);
+curveVertex(431.5, 681.609375);
+curveVertex(431.5, 669.609375);
+curveVertex(430.5, 657.609375);
+endShape();
+  
+beginShape();//cama esquerre
+  fill(87, 134, 43)
+curveVertex(496.5, 663.609375);
+curveVertex(498.5, 678.609375);
+curveVertex(498.5, 695.609375);
+curveVertex(499.5, 709.609375);
+curveVertex(498.5, 724.609375);
+curveVertex(493.5, 729.609375);
+curveVertex(489.5, 732.609375);
+curveVertex(487.5, 742.609375);
+curveVertex(492.5, 749.609375);
+curveVertex(485.5, 758.609375);
+curveVertex(482.5, 769.609375);
+curveVertex(480.5, 780.609375);
+curveVertex(479.5, 794.609375);
+curveVertex(479.5, 810.609375);
+curveVertex(497.5, 821.609375);
+curveVertex(521.5, 828.609375);
+curveVertex(541.5, 828.609375);
+curveVertex(555.5, 828.609375);
+curveVertex(569.5, 823.609375);
+curveVertex(577.5, 815.609375);
+curveVertex(580.5, 802.609375);
+curveVertex(578.5, 787.609375);
+curveVertex(568.5, 777.609375);
+curveVertex(550.5, 773.609375);
+curveVertex(533.5, 776.609375);
+curveVertex(551.5, 771.609375);
+curveVertex(549.5, 764.609375);
+curveVertex(545.5, 750.609375);
+curveVertex(550.5, 741.609375);
+curveVertex(546.5, 731.609375);
+curveVertex(536.5, 724.609375);
+curveVertex(536.5, 709.609375);
+curveVertex(535.5, 691.609375);
+curveVertex(535.5, 678.609375);
+curveVertex(533.5, 660.609375);
+endShape();
+  
+beginShape();//detall de la bamba
+curveVertex(340.5, 809.609375);
+curveVertex(360.5, 814.609375);
+curveVertex(375.5, 815.609375);
+curveVertex(391.5, 817.609375);
+curveVertex(407.5, 817.609375);
+curveVertex(423.5, 815.609375);
+curveVertex(438.5, 808.609375);
+curveVertex(448.5, 806.609375);
+curveVertex(458.5, 800.609375);
+curveVertex(465.5, 794.609375);
+endShape();
+  
+beginShape();//detall de la bamba
+curveVertex(470.5, 797.609375);
+curveVertex(485.5, 806.609375);
+curveVertex(497.5, 813.609375);
+curveVertex(512.5, 817.609375);
+curveVertex(528.5, 817.609375);
+curveVertex(538.5, 817.609375);
+curveVertex(554.5, 815.609375);
+curveVertex(566.5, 814.609375);
+curveVertex(577.5, 814.609375);
+curveVertex(587.5, 811.609375);
+endShape();
+  
+beginShape();//detall de la bamba
+    fill(254, 253, 219)
+curveVertex(470.5, 797.609375);
+curveVertex(485.5, 806.609375);
+curveVertex(497.5, 813.609375);
+curveVertex(512.5, 817.609375);
+curveVertex(528.5, 817.609375);
+curveVertex(538.5, 817.609375);
+curveVertex(554.5, 815.609375);
+curveVertex(566.5, 814.609375);
+curveVertex(577.5, 814.609375);
+curveVertex(587.5, 811.609375);
+curveVertex(576.5, 814.609375);
+curveVertex(565.5, 814.609375);
+curveVertex(555.5, 814.609375);
+curveVertex(539.5, 817.609375);
+curveVertex(527.5, 817.609375);
+curveVertex(512.5, 816.609375);
+curveVertex(495.5, 812.609375);
+curveVertex(485.5, 806.609375);
+curveVertex(474.5, 797.609375);
+curveVertex(461.5, 790.609375);
+endShape();
+  
+beginShape();//pupila de l'ull dret
+  fill(0, 0, 0)
+curveVertex(363.5, 267.609375);
+curveVertex(349.5, 275.609375);
+curveVertex(339.5, 286.609375);
+curveVertex(336.5, 300.609375);
+curveVertex(338.5, 315.609375);
+curveVertex(344.5, 328.609375);
+curveVertex(356.5, 338.609375);
+curveVertex(366.5, 343.609375);
+curveVertex(379.5, 343.609375);
+curveVertex(394.5, 341.609375);
+curveVertex(403.5, 335.609375);
+curveVertex(410.5, 327.609375);
+curveVertex(414.5, 316.609375);
+curveVertex(415.5, 304.609375);
+curveVertex(415.5, 294.609375);
+curveVertex(412.5, 284.609375);
+curveVertex(405.5, 274.609375);
+curveVertex(395.5, 267.609375);
+curveVertex(384.5, 265.609375);
+curveVertex(371.5, 264.609375);
+curveVertex(364.5, 267.609375);
 endShape(CLOSE);
   
-//ceja izquierda
-  beginShape();
-vertex(264, 104.1875);
-vertex(245, 104.1875+s);
-endShape();
+beginShape();//pupila d'ull esquerre
+  fill(0, 0, 0)
+curveVertex(486.5, 270.609375);
+curveVertex(497.5, 266.609375);
+curveVertex(512.5, 265.609375);
+curveVertex(526.5, 267.609375);
+curveVertex(538.5, 273.609375);
+curveVertex(545.5, 285.609375);
+curveVertex(548.5, 301.609375);
+curveVertex(549.5, 318.609375);
+curveVertex(541.5, 332.609375);
+curveVertex(533.5, 341.609375);
+curveVertex(519.5, 346.609375);
+curveVertex(507.5, 346.609375);
+curveVertex(495.5, 345.609375);
+curveVertex(482.5, 338.609375);
+curveVertex(476.5, 329.609375);
+curveVertex(470.5, 320.609375);
+curveVertex(468.5, 307.609375);
+curveVertex(472.5, 290.609375);
+curveVertex(477.5, 278.609375);
+curveVertex(489.5, 269.609375);
+endShape(CLOSE);
   
-//ceja derecha
-  beginShape();
-vertex(293, 103.1875);
-vertex(316, 103.1875+s);
-endShape();
+beginShape();//brill gran de l'ull esquerre
+  fill(252, 255, 254)
+curveVertex(493.5, 287.609375);
+curveVertex(501.5, 285.609375);
+curveVertex(511.5, 287.609375);
+curveVertex(517.5, 293.609375);
+curveVertex(518.5, 301.609375);
+curveVertex(518.5, 310.609375);
+curveVertex(515.5, 316.609375);
+curveVertex(510.5, 321.609375);
+curveVertex(506.5, 323.609375);
+curveVertex(499.5, 324.609375);
+curveVertex(492.5, 323.609375);
+curveVertex(485.5, 320.609375);
+curveVertex(480.5, 315.609375);
+curveVertex(477.5, 309.609375);
+curveVertex(477.5, 301.609375);
+curveVertex(480.5, 295.609375);
+curveVertex(484.5, 289.609375);
+curveVertex(490.5, 286.609375);
+endShape(CLOSE);
   
-    }
+beginShape();//brill gran de l'ull dret
+  fill(252, 255, 254)
+curveVertex(348.5, 292.609375);
+curveVertex(355.5, 286.609375);
+curveVertex(363.5, 283.609375);
+curveVertex(369.5, 283.609375);
+curveVertex(376.5, 285.609375);
+curveVertex(382.5, 290.609375);
+curveVertex(384.5, 296.609375);
+curveVertex(385.5, 304.609375);
+curveVertex(383.5, 310.609375);
+curveVertex(380.5, 316.609375);
+curveVertex(374.5, 321.609375);
+curveVertex(367.5, 324.609375);
+curveVertex(356.5, 322.609375);
+curveVertex(348.5, 317.609375);
+curveVertex(345.5, 313.609375);
+curveVertex(343.5, 307.609375);
+curveVertex(343.5, 298.609375);
+curveVertex(348.5, 290.609375);
+endShape(CLOSE);
+  
+beginShape();//brill petit de l'ull esquerre
+curveVertex(486.5, 328.609375);
+curveVertex(491.5, 327.609375);
+curveVertex(495.5, 329.609375);
+curveVertex(497.5, 334.609375);
+curveVertex(495.5, 337.609375);
+curveVertex(491.5, 339.609375);
+curveVertex(487.5, 339.609375);
+curveVertex(483.5, 336.609375);
+curveVertex(483.5, 332.609375);
+curveVertex(487.5, 330.609375);
+endShape(CLOSE);
+  
+beginShape();//brill petit de l'ull dret
+curveVertex(349.5, 332.609375);
+curveVertex(350.5, 328.609375);
+curveVertex(354.5, 327.609375);
+curveVertex(358.5, 327.609375);
+curveVertex(362.5, 330.609375);
+curveVertex(362.5, 336.609375);
+curveVertex(358.5, 339.609375);
+curveVertex(354.5, 339.609375);
+curveVertex(350.5, 338.609375);
+curveVertex(348.5, 334.609375);
+endShape(CLOSE);
+}
 
     function figuraTrist(intensity) {
-      r = map(intensity, 0, 1, 255, 0);
-      g = map(intensity, 0, 1, 255, 0);
-      b = map(intensity, 0, 1, 255, 255);
-      r2 = map(intensity, 1, 0, 255, 0);
-      g2 = map(intensity, 1, 0, 255, 0);
-      b2 = map(intensity, 1, 0, 255, 255);
-      ll = map(intensity, 0.6, 1, 0, 15);
-      c = map(intensity, 0.6, 1, 0, 8)
+function setup() {
+  createCanvas(1000, 1000);
+}
 
-
-  background(r2, g2, b2);
-
-// Cos
-  stroke(0);
-beginShape();
-  fill(r, g, b)
-curveVertex(277, 201.1875);
-curveVertex(282, 239.1875);
-curveVertex(282, 244.1875);
-curveVertex(275, 248.1875);
-curveVertex(252, 266.1875);
-curveVertex(223, 288.1875);
-curveVertex(211, 298.1875);
-curveVertex(202, 309.1875);
-curveVertex(206, 331.1875);
-curveVertex(226, 354.1875);
-curveVertex(264, 369.1875);
-curveVertex(316, 372.1875);
-curveVertex(397, 328.1875);
-curveVertex(400, 290.1875);
-curveVertex(385, 222.1875);
-curveVertex(364, 192.1875);
-curveVertex(337, 179.1875);
-curveVertex(306, 189.1875);
-curveVertex(287, 195.1875);
-endShape(CLOSE);
-  
-// Cara
-beginShape();
-curveVertex(239, 64.1875);
-curveVertex(235, 93.1875);
-curveVertex(233, 115.1875);
-curveVertex(234, 135.1875);
-curveVertex(236, 157.1875);
-curveVertex(242, 176.1875);
-curveVertex(249, 191.1875);
-curveVertex(261, 204.1875);
-curveVertex(277, 215.1875);
-curveVertex(305, 215.1875);
-curveVertex(332, 205.1875);
-curveVertex(346, 194.1875);
-curveVertex(371, 159.1875);
-curveVertex(373, 98.1875);
-curveVertex(358, 54.1875);
-curveVertex(327, 34.1875);
-curveVertex(299, 30.1875);
-curveVertex(271, 34.1875);
-curveVertex(253, 41.1875);
-curveVertex(237, 61.1875);
-endShape(CLOSE);
-
-// Ropa exterior
-beginShape();
-curveVertex(408, 285.1875);
-curveVertex(380, 294.1875);
-curveVertex(362, 310.1875);
-curveVertex(349, 323.1875);
-curveVertex(332, 342.1875);
-curveVertex(329, 349.1875);
-curveVertex(328, 352.1875);
-curveVertex(323, 352.1875);
-curveVertex(296, 353.1875);
-curveVertex(275, 351.1875);
-curveVertex(255, 345.1875);
-curveVertex(240, 338.1875);
-curveVertex(226, 326.1875);
-curveVertex(220, 314.1875);
-curveVertex(216, 303.1875);
-curveVertex(212, 295.1875);
-curveVertex(212, 286.1875);
-curveVertex(208, 285.1875);
-curveVertex(203, 288.1875);
-curveVertex(187, 302.1875);
-curveVertex(176, 313.1875);
-curveVertex(170, 321.1875);
-curveVertex(169, 329.1875);
-curveVertex(168, 331.1875);
-curveVertex(164, 334.1875);
-curveVertex(153, 339.1875);
-curveVertex(149, 347.1875);
-curveVertex(146, 356.1875);
-curveVertex(145, 370.1875);
-curveVertex(144, 380.1875);
-curveVertex(144, 390.1875);
-curveVertex(143, 393.1875);
-curveVertex(140, 395.1875);
-curveVertex(132, 398.1875);
-curveVertex(127, 404.1875);
-curveVertex(124, 411.1875);
-curveVertex(123, 419.1875);
-curveVertex(122, 424.1875);
-curveVertex(119, 425.1875);
-curveVertex(113, 427.1875);
-curveVertex(102, 433.1875);
-curveVertex(92, 443.1875);
-curveVertex(86, 453.1875);
-curveVertex(79, 468.1875);
-curveVertex(75, 480.1875);
-curveVertex(72, 494.1875);
-curveVertex(69, 508.1875);
-curveVertex(65, 523.1875);
-curveVertex(65, 538.1875);
-curveVertex(69, 546.1875);
-curveVertex(72, 555.1875);
-curveVertex(68, 565.1875);
-curveVertex(59, 579.1875);
-curveVertex(49, 592.1875);
-curveVertex(46, 599.1875);
-curveVertex(46, 599.1875);
-curveVertex(543, 599.1875);
-curveVertex(542, 598.1875);
-curveVertex(542, 572.1875);
-curveVertex(540, 549.1875);
-curveVertex(535, 526.1875);
-curveVertex(530, 498.1875);
-curveVertex(529, 470.1875);
-curveVertex(526, 444.1875);
-curveVertex(517, 422.1875);
-curveVertex(506, 399.1875);
-curveVertex(506, 395.1875);
-curveVertex(508, 370.1875);
-curveVertex(505, 357.1875);
-curveVertex(492, 334.1875);
-curveVertex(481, 317.1875);
-curveVertex(467, 302.1875);
-curveVertex(449, 289.1875);
-curveVertex(427, 284.1875);
-curveVertex(416, 284.1875);
-endShape(CLOSE);
-  
-// Pelo
-beginShape();
-curveVertex(239, 77.1875);
-curveVertex(237, 92.1875);
-curveVertex(237, 104.1875);
-curveVertex(236, 117.1875);
-curveVertex(236, 131.1875);
-curveVertex(237, 142.1875);
-curveVertex(238, 154.1875);
-curveVertex(243, 171.1875);
-curveVertex(248, 181.1875);
-curveVertex(255, 193.1875);
-curveVertex(263, 203.1875);
-curveVertex(266, 217.1875);
-curveVertex(265, 227.1875);
-curveVertex(260, 235.1875);
-curveVertex(267, 241.1875);
-curveVertex(268, 252.1875);
-curveVertex(256, 263.1875);
-curveVertex(248, 272.1875);
-curveVertex(249, 282.1875);
-curveVertex(244, 289.1875);
-curveVertex(237, 292.1875);
-curveVertex(235, 298.1875);
-curveVertex(238, 304.1875);
-curveVertex(239, 311.1875);
-curveVertex(236, 317.1875);
-curveVertex(229, 318.1875);
-curveVertex(228, 313.1875);
-curveVertex(227, 309.1875);
-curveVertex(220, 306.1875);
-curveVertex(213, 304.1875);
-curveVertex(210, 296.1875);
-curveVertex(211, 288.1875);
-curveVertex(207, 282.1875);
-curveVertex(206, 275.1875);
-curveVertex(213, 266.1875);
-curveVertex(210, 258.1875);
-curveVertex(214, 247.1875);
-curveVertex(210, 237.1875);
-curveVertex(217, 225.1875);
-curveVertex(212, 214.1875);
-curveVertex(219, 198.1875);
-curveVertex(212, 189.1875);
-curveVertex(218, 171.1875);
-curveVertex(208, 156.1875);
-curveVertex(218, 144.1875);
-curveVertex(216, 136.1875);
-curveVertex(213, 124.1875);
-curveVertex(219, 110.1875);
-curveVertex(215, 93.1875);
-curveVertex(226, 81.1875);
-curveVertex(224, 67.1875);
-curveVertex(231, 54.1875);
-curveVertex(244, 39.1875);
-curveVertex(260, 23.1875);
-curveVertex(274, 15.1875);
-curveVertex(293, 9.1875);
-curveVertex(315, 9.1875);
-curveVertex(338, 14.1875);
-curveVertex(350, 19.1875);
-curveVertex(360, 25.1875);
-curveVertex(368, 33.1875);
-curveVertex(377, 41.1875);
-curveVertex(383, 52.1875);
-curveVertex(387, 62.1875);
-curveVertex(391, 74.1875);
-curveVertex(394, 90.1875);
-curveVertex(395, 105.1875);
-curveVertex(396, 118.1875);
-curveVertex(401, 130.1875);
-curveVertex(405, 141.1875);
-curveVertex(401, 156.1875);
-curveVertex(412, 172.1875);
-curveVertex(415, 179.1875);
-curveVertex(410, 201.1875);
-curveVertex(410, 208.1875);
-curveVertex(418, 225.1875);
-curveVertex(420, 238.1875);
-curveVertex(434, 247.1875);
-curveVertex(436, 258.1875);
-curveVertex(435, 266.1875);
-curveVertex(437, 274.1875);
-curveVertex(441, 281.1875);
-curveVertex(436, 284.1875);
-curveVertex(419, 284.1875);
-curveVertex(401, 286.1875);
-curveVertex(386, 292.1875);
-curveVertex(373, 303.1875);
-curveVertex(360, 314.1875);
-curveVertex(351, 320.1875);
-curveVertex(350, 307.1875);
-curveVertex(344, 294.1875);
-curveVertex(354, 278.1875);
-curveVertex(348, 264.1875);
-curveVertex(356, 246.1875);
-curveVertex(345, 235.1875);
-curveVertex(352, 214.1875);
-curveVertex(342, 193.1875);
-curveVertex(350, 176.1875);
-curveVertex(350, 167.1875);
-curveVertex(339, 152.1875);
-curveVertex(337, 142.1875);
-curveVertex(350, 116.1875);
-curveVertex(344, 108.1875);
-curveVertex(343, 99.1875);
-curveVertex(347, 83.1875);
-curveVertex(341, 70.1875);
-curveVertex(332, 60.1875);
-curveVertex(320, 55.1875);
-curveVertex(305, 50.1875);
-curveVertex(288, 47.1875);
-curveVertex(273, 48.1875);
-curveVertex(259, 51.1875);
-curveVertex(249, 56.1875);
-curveVertex(242, 64.1875);
-endShape(CLOSE);
-  
-// OJO izquierdo
-  beginShape();
-vertex(266, 118.83333587646484);
-bezierVertex(262, 115.83333587646484, 256, 113.83333587646484, 249, 114.83333587646484);
-bezierVertex(245, 117.83333587646484, 244, 120.83333587646484, 247, 122.83333587646484);
-bezierVertex(250, 123.83333587646484, 254, 124.83333587646484, 258, 123.83333587646484);
-bezierVertex(262, 122.83333587646484, 265, 121.83333587646484, 267, 120.83333587646484);
-endShape(CLOSE);
-  
-// OJO derecha
-
-  beginShape();
-vertex(293, 119.36249542236328);
-bezierVertex(296, 122.36249542236328, 301, 123.36249542236328, 306, 123.36249542236328);
-bezierVertex(311, 122.36249542236328, 315, 120.36249542236328, 318, 117.36249542236328);
-bezierVertex(312, 114.36249542236328, 306, 113.36249542236328, 299, 114.36249542236328);
-endShape(CLOSE);
-  
-// NARIZ
-beginShape();
-vertex(264.01171875, 155.69921875);
-bezierVertex(264.01171875, 158.69921875, 266.01171875, 160.69921875, 268.01171875, 162.69921875);
-bezierVertex(272.01171875, 163.69921875, 275.01171875, 164.69921875, 277.01171875, 164.69921875);
-bezierVertex(280.01171875, 163.69921875, 282.01171875, 162.69921875, 283.01171875, 162.69921875);
-bezierVertex(285.01171875, 162.69921875, 286.01171875, 162.69921875, 287.01171875, 162.69921875);
-bezierVertex(288.01171875, 161.69921875, 288.01171875, 160.69921875, 288.01171875, 158.69921875);
-endShape();
-
-// Boca
-  beginShape();
-curveVertex(260.01171875, 200);
-curveVertex(269.01171875, 176.94921875);
-curveVertex(277.01171875, 177.94921875);
-curveVertex(294.01171875, 200);
-endShape();
-  
-//ceja izquierda
-  beginShape();
-vertex(264, 100.1875);
-vertex(245, c+107.1875);
-endShape();
-  
-//ceja derecha
-  beginShape();
-vertex(293, 100.1875);
-vertex(316, c+105.1875);
-endShape();
-  
-//lagrima1
-fill(255);
-  beginShape();
-vertex(265, ll+130.1875);
-vertex(263, ll+135.1875);
-vertex(263, ll+137.1875);
-vertex(264, ll+138.1875);
-vertex(265, ll+138.1875);
-vertex(266, ll+137.1875);
-vertex(266, ll+135.1875);
-vertex(266, ll+133.1875);
-endShape(CLOSE);
-  
-//lagrima2
-  beginShape();
-vertex(297, ll+144.1875);
-vertex(295, ll+147.1875);
-vertex(295, ll+150.1875);
-vertex(295, ll+152.1875);
-vertex(297, ll+153.1875);
-vertex(299, ll+153.1875);
-vertex(300, ll+152.1875);
-vertex(301, ll+150.1875);
-vertex(300, ll+148.1875);
-vertex(299, ll+146.1875);
-vertex(297, ll+144.1875);
-endShape(CLOSE);
-    }
-
-    function figuraEnfadat(intensity) {
-
-    r = map(intensity, 0, 1, 255, 255);
-    g = map(intensity, 0, 1, 255, 0);
-    b = map(intensity, 0, 1, 255, 0);
-    r2 = map(intensity, 1, 0, 255, 255);
-    g2 = map(intensity, 1, 0, 255, 0);
-    b2 = map(intensity, 1, 0, 255, 0);
-
-
-
-// Cos
-  stroke(0);
-beginShape();
-    background(r2, g2, b2);
-  fill(r, g, b)
-curveVertex(277, 201.1875);
-curveVertex(282, 239.1875);
-curveVertex(282, 244.1875);
-curveVertex(275, 248.1875);
-curveVertex(252, 266.1875);
-curveVertex(223, 288.1875);
-curveVertex(211, 298.1875);
-curveVertex(202, 309.1875);
-curveVertex(206, 331.1875);
-curveVertex(226, 354.1875);
-curveVertex(264, 369.1875);
-curveVertex(316, 372.1875);
-curveVertex(397, 328.1875);
-curveVertex(400, 290.1875);
-curveVertex(385, 222.1875);
-curveVertex(364, 192.1875);
-curveVertex(337, 179.1875);
-curveVertex(306, 189.1875);
-curveVertex(287, 195.1875);
-endShape(CLOSE);
-  
-// Cara
-beginShape();
-curveVertex(239, 64.1875);
-curveVertex(235, 93.1875);
-curveVertex(233, 115.1875);
-curveVertex(234, 135.1875);
-curveVertex(236, 157.1875);
-curveVertex(242, 176.1875);
-curveVertex(249, 191.1875);
-curveVertex(261, 204.1875);
-curveVertex(277, 215.1875);
-curveVertex(305, 215.1875);
-curveVertex(332, 205.1875);
-curveVertex(346, 194.1875);
-curveVertex(371, 159.1875);
-curveVertex(373, 98.1875);
-curveVertex(358, 54.1875);
-curveVertex(327, 34.1875);
-curveVertex(299, 30.1875);
-curveVertex(271, 34.1875);
-curveVertex(253, 41.1875);
-curveVertex(237, 61.1875);
-endShape(CLOSE);
-
-// Ropa exterior
-beginShape();
-curveVertex(408, 285.1875);
-curveVertex(380, 294.1875);
-curveVertex(362, 310.1875);
-curveVertex(349, 323.1875);
-curveVertex(332, 342.1875);
-curveVertex(329, 349.1875);
-curveVertex(328, 352.1875);
-curveVertex(323, 352.1875);
-curveVertex(296, 353.1875);
-curveVertex(275, 351.1875);
-curveVertex(255, 345.1875);
-curveVertex(240, 338.1875);
-curveVertex(226, 326.1875);
-curveVertex(220, 314.1875);
-curveVertex(216, 303.1875);
-curveVertex(212, 295.1875);
-curveVertex(212, 286.1875);
-curveVertex(208, 285.1875);
-curveVertex(203, 288.1875);
-curveVertex(187, 302.1875);
-curveVertex(176, 313.1875);
-curveVertex(170, 321.1875);
-curveVertex(169, 329.1875);
-curveVertex(168, 331.1875);
-curveVertex(164, 334.1875);
-curveVertex(153, 339.1875);
-curveVertex(149, 347.1875);
-curveVertex(146, 356.1875);
-curveVertex(145, 370.1875);
-curveVertex(144, 380.1875);
-curveVertex(144, 390.1875);
-curveVertex(143, 393.1875);
-curveVertex(140, 395.1875);
-curveVertex(132, 398.1875);
-curveVertex(127, 404.1875);
-curveVertex(124, 411.1875);
-curveVertex(123, 419.1875);
-curveVertex(122, 424.1875);
-curveVertex(119, 425.1875);
-curveVertex(113, 427.1875);
-curveVertex(102, 433.1875);
-curveVertex(92, 443.1875);
-curveVertex(86, 453.1875);
-curveVertex(79, 468.1875);
-curveVertex(75, 480.1875);
-curveVertex(72, 494.1875);
-curveVertex(69, 508.1875);
-curveVertex(65, 523.1875);
-curveVertex(65, 538.1875);
-curveVertex(69, 546.1875);
-curveVertex(72, 555.1875);
-curveVertex(68, 565.1875);
-curveVertex(59, 579.1875);
-curveVertex(49, 592.1875);
-curveVertex(46, 599.1875);
-curveVertex(46, 599.1875);
-curveVertex(543, 599.1875);
-curveVertex(542, 598.1875);
-curveVertex(542, 572.1875);
-curveVertex(540, 549.1875);
-curveVertex(535, 526.1875);
-curveVertex(530, 498.1875);
-curveVertex(529, 470.1875);
-curveVertex(526, 444.1875);
-curveVertex(517, 422.1875);
-curveVertex(506, 399.1875);
-curveVertex(506, 395.1875);
-curveVertex(508, 370.1875);
-curveVertex(505, 357.1875);
-curveVertex(492, 334.1875);
-curveVertex(481, 317.1875);
-curveVertex(467, 302.1875);
-curveVertex(449, 289.1875);
-curveVertex(427, 284.1875);
-curveVertex(416, 284.1875);
-endShape(CLOSE);
-  
-// Pelo
-beginShape();
-curveVertex(239, 77.1875);
-curveVertex(237, 92.1875);
-curveVertex(237, 104.1875);
-curveVertex(236, 117.1875);
-curveVertex(236, 131.1875);
-curveVertex(237, 142.1875);
-curveVertex(238, 154.1875);
-curveVertex(243, 171.1875);
-curveVertex(248, 181.1875);
-curveVertex(255, 193.1875);
-curveVertex(263, 203.1875);
-curveVertex(266, 217.1875);
-curveVertex(265, 227.1875);
-curveVertex(260, 235.1875);
-curveVertex(267, 241.1875);
-curveVertex(268, 252.1875);
-curveVertex(256, 263.1875);
-curveVertex(248, 272.1875);
-curveVertex(249, 282.1875);
-curveVertex(244, 289.1875);
-curveVertex(237, 292.1875);
-curveVertex(235, 298.1875);
-curveVertex(238, 304.1875);
-curveVertex(239, 311.1875);
-curveVertex(236, 317.1875);
-curveVertex(229, 318.1875);
-curveVertex(228, 313.1875);
-curveVertex(227, 309.1875);
-curveVertex(220, 306.1875);
-curveVertex(213, 304.1875);
-curveVertex(210, 296.1875);
-curveVertex(211, 288.1875);
-curveVertex(207, 282.1875);
-curveVertex(206, 275.1875);
-curveVertex(213, 266.1875);
-curveVertex(210, 258.1875);
-curveVertex(214, 247.1875);
-curveVertex(210, 237.1875);
-curveVertex(217, 225.1875);
-curveVertex(212, 214.1875);
-curveVertex(219, 198.1875);
-curveVertex(212, 189.1875);
-curveVertex(218, 171.1875);
-curveVertex(208, 156.1875);
-curveVertex(218, 144.1875);
-curveVertex(216, 136.1875);
-curveVertex(213, 124.1875);
-curveVertex(219, 110.1875);
-curveVertex(215, 93.1875);
-curveVertex(226, 81.1875);
-curveVertex(224, 67.1875);
-curveVertex(231, 54.1875);
-curveVertex(244, 39.1875);
-curveVertex(260, 23.1875);
-curveVertex(274, 15.1875);
-curveVertex(293, 9.1875);
-curveVertex(315, 9.1875);
-curveVertex(338, 14.1875);
-curveVertex(350, 19.1875);
-curveVertex(360, 25.1875);
-curveVertex(368, 33.1875);
-curveVertex(377, 41.1875);
-curveVertex(383, 52.1875);
-curveVertex(387, 62.1875);
-curveVertex(391, 74.1875);
-curveVertex(394, 90.1875);
-curveVertex(395, 105.1875);
-curveVertex(396, 118.1875);
-curveVertex(401, 130.1875);
-curveVertex(405, 141.1875);
-curveVertex(401, 156.1875);
-curveVertex(412, 172.1875);
-curveVertex(415, 179.1875);
-curveVertex(410, 201.1875);
-curveVertex(410, 208.1875);
-curveVertex(418, 225.1875);
-curveVertex(420, 238.1875);
-curveVertex(434, 247.1875);
-curveVertex(436, 258.1875);
-curveVertex(435, 266.1875);
-curveVertex(437, 274.1875);
-curveVertex(441, 281.1875);
-curveVertex(436, 284.1875);
-curveVertex(419, 284.1875);
-curveVertex(401, 286.1875);
-curveVertex(386, 292.1875);
-curveVertex(373, 303.1875);
-curveVertex(360, 314.1875);
-curveVertex(351, 320.1875);
-curveVertex(350, 307.1875);
-curveVertex(344, 294.1875);
-curveVertex(354, 278.1875);
-curveVertex(348, 264.1875);
-curveVertex(356, 246.1875);
-curveVertex(345, 235.1875);
-curveVertex(352, 214.1875);
-curveVertex(342, 193.1875);
-curveVertex(350, 176.1875);
-curveVertex(350, 167.1875);
-curveVertex(339, 152.1875);
-curveVertex(337, 142.1875);
-curveVertex(350, 116.1875);
-curveVertex(344, 108.1875);
-curveVertex(343, 99.1875);
-curveVertex(347, 83.1875);
-curveVertex(341, 70.1875);
-curveVertex(332, 60.1875);
-curveVertex(320, 55.1875);
-curveVertex(305, 50.1875);
-curveVertex(288, 47.1875);
-curveVertex(273, 48.1875);
-curveVertex(259, 51.1875);
-curveVertex(249, 56.1875);
-curveVertex(242, 64.1875);
-endShape(CLOSE);
-  
-// OJO izquierdo
-  beginShape();
-vertex(266, 118.83333587646484);
-bezierVertex(262, 115.83333587646484, 256, 113.83333587646484, 249, 114.83333587646484);
-bezierVertex(245, 117.83333587646484, 244, 120.83333587646484, 247, 122.83333587646484);
-bezierVertex(250, 123.83333587646484, 254, 124.83333587646484, 258, 123.83333587646484);
-bezierVertex(262, 122.83333587646484, 265, 121.83333587646484, 267, 120.83333587646484);
-endShape(CLOSE);
-  
-// OJO derecha
-
-  beginShape();
-vertex(293, 119.36249542236328);
-bezierVertex(296, 122.36249542236328, 301, 123.36249542236328, 306, 123.36249542236328);
-bezierVertex(311, 122.36249542236328, 315, 120.36249542236328, 318, 117.36249542236328);
-bezierVertex(312, 114.36249542236328, 306, 113.36249542236328, 299, 114.36249542236328);
-endShape(CLOSE);
-  
-// NARIZ
-beginShape();
-vertex(264.01171875, 155.69921875);
-bezierVertex(264.01171875, 158.69921875, 266.01171875, 160.69921875, 268.01171875, 162.69921875);
-bezierVertex(272.01171875, 163.69921875, 275.01171875, 164.69921875, 277.01171875, 164.69921875);
-bezierVertex(280.01171875, 163.69921875, 282.01171875, 162.69921875, 283.01171875, 162.69921875);
-bezierVertex(285.01171875, 162.69921875, 286.01171875, 162.69921875, 287.01171875, 162.69921875);
-bezierVertex(288.01171875, 161.69921875, 288.01171875, 160.69921875, 288.01171875, 158.69921875);
-endShape();
-
-// Boca
-  beginShape();
-curveVertex(260.01171875, 200);
-curveVertex(269.01171875, 176.94921875);
-curveVertex(277.01171875, 177.94921875);
-curveVertex(294.01171875, 200);
-endShape();
-  
-//ceja izquierda
-  beginShape();
-vertex(264, 104.1875);
-vertex(245, map(intensity, 1, 0.5, 0, 10) + 95.1875);
-endShape();
-  
-//ceja derecha
-  beginShape();
-vertex(293, 103.1875);
-vertex(316, map(intensity, 1, 0.5, 0, 10) + 90.1875);
-endShape();
-
-    }
-
-    function figuraFastiguejat(intensity) {
-    r = map(intensity, 0, 1, 255, 0);
-    g = map(intensity, 0, 1, 255, 255);
-    b = map(intensity, 0, 1, 255, 0);
-    r2 = map(intensity, 1, 0, 255, 0);
-    g2 = map(intensity, 1, 0, 255, 255);
-    b2 = map(intensity, 1, 0, 255, 0);
-
-    background(r2, g2, b2);
-
-
-// Cos
-  stroke(0);
-beginShape();
-  fill(r, g, b)
-curveVertex(277, 201.1875);
-curveVertex(282, 239.1875);
-curveVertex(282, 244.1875);
-curveVertex(275, 248.1875);
-curveVertex(252, 266.1875);
-curveVertex(223, 288.1875);
-curveVertex(211, 298.1875);
-curveVertex(202, 309.1875);
-curveVertex(206, 331.1875);
-curveVertex(226, 354.1875);
-curveVertex(264, 369.1875);
-curveVertex(316, 372.1875);
-curveVertex(397, 328.1875);
-curveVertex(400, 290.1875);
-curveVertex(385, 222.1875);
-curveVertex(364, 192.1875);
-curveVertex(337, 179.1875);
-curveVertex(306, 189.1875);
-curveVertex(287, 195.1875);
-endShape(CLOSE);
-  
-// Cara
-beginShape();
-curveVertex(239, 64.1875);
-curveVertex(235, 93.1875);
-curveVertex(233, 115.1875);
-curveVertex(234, 135.1875);
-curveVertex(236, 157.1875);
-curveVertex(242, 176.1875);
-curveVertex(249, 191.1875);
-curveVertex(261, 204.1875);
-curveVertex(277, 215.1875);
-curveVertex(305, 215.1875);
-curveVertex(332, 205.1875);
-curveVertex(346, 194.1875);
-curveVertex(371, 159.1875);
-curveVertex(373, 98.1875);
-curveVertex(358, 54.1875);
-curveVertex(327, 34.1875);
-curveVertex(299, 30.1875);
-curveVertex(271, 34.1875);
-curveVertex(253, 41.1875);
-curveVertex(237, 61.1875);
-endShape(CLOSE);
-
-// Ropa exterior
-beginShape();
-curveVertex(408, 285.1875);
-curveVertex(380, 294.1875);
-curveVertex(362, 310.1875);
-curveVertex(349, 323.1875);
-curveVertex(332, 342.1875);
-curveVertex(329, 349.1875);
-curveVertex(328, 352.1875);
-curveVertex(323, 352.1875);
-curveVertex(296, 353.1875);
-curveVertex(275, 351.1875);
-curveVertex(255, 345.1875);
-curveVertex(240, 338.1875);
-curveVertex(226, 326.1875);
-curveVertex(220, 314.1875);
-curveVertex(216, 303.1875);
-curveVertex(212, 295.1875);
-curveVertex(212, 286.1875);
-curveVertex(208, 285.1875);
-curveVertex(203, 288.1875);
-curveVertex(187, 302.1875);
-curveVertex(176, 313.1875);
-curveVertex(170, 321.1875);
-curveVertex(169, 329.1875);
-curveVertex(168, 331.1875);
-curveVertex(164, 334.1875);
-curveVertex(153, 339.1875);
-curveVertex(149, 347.1875);
-curveVertex(146, 356.1875);
-curveVertex(145, 370.1875);
-curveVertex(144, 380.1875);
-curveVertex(144, 390.1875);
-curveVertex(143, 393.1875);
-curveVertex(140, 395.1875);
-curveVertex(132, 398.1875);
-curveVertex(127, 404.1875);
-curveVertex(124, 411.1875);
-curveVertex(123, 419.1875);
-curveVertex(122, 424.1875);
-curveVertex(119, 425.1875);
-curveVertex(113, 427.1875);
-curveVertex(102, 433.1875);
-curveVertex(92, 443.1875);
-curveVertex(86, 453.1875);
-curveVertex(79, 468.1875);
-curveVertex(75, 480.1875);
-curveVertex(72, 494.1875);
-curveVertex(69, 508.1875);
-curveVertex(65, 523.1875);
-curveVertex(65, 538.1875);
-curveVertex(69, 546.1875);
-curveVertex(72, 555.1875);
-curveVertex(68, 565.1875);
-curveVertex(59, 579.1875);
-curveVertex(49, 592.1875);
-curveVertex(46, 599.1875);
-curveVertex(46, 599.1875);
-curveVertex(543, 599.1875);
-curveVertex(542, 598.1875);
-curveVertex(542, 572.1875);
-curveVertex(540, 549.1875);
-curveVertex(535, 526.1875);
-curveVertex(530, 498.1875);
-curveVertex(529, 470.1875);
-curveVertex(526, 444.1875);
-curveVertex(517, 422.1875);
-curveVertex(506, 399.1875);
-curveVertex(506, 395.1875);
-curveVertex(508, 370.1875);
-curveVertex(505, 357.1875);
-curveVertex(492, 334.1875);
-curveVertex(481, 317.1875);
-curveVertex(467, 302.1875);
-curveVertex(449, 289.1875);
-curveVertex(427, 284.1875);
-curveVertex(416, 284.1875);
-endShape(CLOSE);
-  
-// Pelo
-beginShape();
-curveVertex(239, 77.1875);
-curveVertex(237, 92.1875);
-curveVertex(237, 104.1875);
-curveVertex(236, 117.1875);
-curveVertex(236, 131.1875);
-curveVertex(237, 142.1875);
-curveVertex(238, 154.1875);
-curveVertex(243, 171.1875);
-curveVertex(248, 181.1875);
-curveVertex(255, 193.1875);
-curveVertex(263, 203.1875);
-curveVertex(266, 217.1875);
-curveVertex(265, 227.1875);
-curveVertex(260, 235.1875);
-curveVertex(267, 241.1875);
-curveVertex(268, 252.1875);
-curveVertex(256, 263.1875);
-curveVertex(248, 272.1875);
-curveVertex(249, 282.1875);
-curveVertex(244, 289.1875);
-curveVertex(237, 292.1875);
-curveVertex(235, 298.1875);
-curveVertex(238, 304.1875);
-curveVertex(239, 311.1875);
-curveVertex(236, 317.1875);
-curveVertex(229, 318.1875);
-curveVertex(228, 313.1875);
-curveVertex(227, 309.1875);
-curveVertex(220, 306.1875);
-curveVertex(213, 304.1875);
-curveVertex(210, 296.1875);
-curveVertex(211, 288.1875);
-curveVertex(207, 282.1875);
-curveVertex(206, 275.1875);
-curveVertex(213, 266.1875);
-curveVertex(210, 258.1875);
-curveVertex(214, 247.1875);
-curveVertex(210, 237.1875);
-curveVertex(217, 225.1875);
-curveVertex(212, 214.1875);
-curveVertex(219, 198.1875);
-curveVertex(212, 189.1875);
-curveVertex(218, 171.1875);
-curveVertex(208, 156.1875);
-curveVertex(218, 144.1875);
-curveVertex(216, 136.1875);
-curveVertex(213, 124.1875);
-curveVertex(219, 110.1875);
-curveVertex(215, 93.1875);
-curveVertex(226, 81.1875);
-curveVertex(224, 67.1875);
-curveVertex(231, 54.1875);
-curveVertex(244, 39.1875);
-curveVertex(260, 23.1875);
-curveVertex(274, 15.1875);
-curveVertex(293, 9.1875);
-curveVertex(315, 9.1875);
-curveVertex(338, 14.1875);
-curveVertex(350, 19.1875);
-curveVertex(360, 25.1875);
-curveVertex(368, 33.1875);
-curveVertex(377, 41.1875);
-curveVertex(383, 52.1875);
-curveVertex(387, 62.1875);
-curveVertex(391, 74.1875);
-curveVertex(394, 90.1875);
-curveVertex(395, 105.1875);
-curveVertex(396, 118.1875);
-curveVertex(401, 130.1875);
-curveVertex(405, 141.1875);
-curveVertex(401, 156.1875);
-curveVertex(412, 172.1875);
-curveVertex(415, 179.1875);
-curveVertex(410, 201.1875);
-curveVertex(410, 208.1875);
-curveVertex(418, 225.1875);
-curveVertex(420, 238.1875);
-curveVertex(434, 247.1875);
-curveVertex(436, 258.1875);
-curveVertex(435, 266.1875);
-curveVertex(437, 274.1875);
-curveVertex(441, 281.1875);
-curveVertex(436, 284.1875);
-curveVertex(419, 284.1875);
-curveVertex(401, 286.1875);
-curveVertex(386, 292.1875);
-curveVertex(373, 303.1875);
-curveVertex(360, 314.1875);
-curveVertex(351, 320.1875);
-curveVertex(350, 307.1875);
-curveVertex(344, 294.1875);
-curveVertex(354, 278.1875);
-curveVertex(348, 264.1875);
-curveVertex(356, 246.1875);
-curveVertex(345, 235.1875);
-curveVertex(352, 214.1875);
-curveVertex(342, 193.1875);
-curveVertex(350, 176.1875);
-curveVertex(350, 167.1875);
-curveVertex(339, 152.1875);
-curveVertex(337, 142.1875);
-curveVertex(350, 116.1875);
-curveVertex(344, 108.1875);
-curveVertex(343, 99.1875);
-curveVertex(347, 83.1875);
-curveVertex(341, 70.1875);
-curveVertex(332, 60.1875);
-curveVertex(320, 55.1875);
-curveVertex(305, 50.1875);
-curveVertex(288, 47.1875);
-curveVertex(273, 48.1875);
-curveVertex(259, 51.1875);
-curveVertex(249, 56.1875);
-curveVertex(242, 64.1875);
-endShape(CLOSE);
-  
-// OJO izquierdo
-  beginShape();
-vertex(266, 118.83333587646484);
-bezierVertex(262, 115.83333587646484, 256, 113.83333587646484, 249, 114.83333587646484);
-bezierVertex(245, 117.83333587646484, 244, 120.83333587646484, 247, 122.83333587646484);
-bezierVertex(250, 123.83333587646484, 254, 124.83333587646484, 258, 123.83333587646484);
-bezierVertex(262, 122.83333587646484, 265, 121.83333587646484, 267, 120.83333587646484);
-endShape(CLOSE);
-  
-// OJO derecha
-
-  beginShape();
-vertex(293, 119.36249542236328);
-bezierVertex(296, 122.36249542236328, 301, 123.36249542236328, 306, 123.36249542236328);
-bezierVertex(311, 122.36249542236328, 315, 120.36249542236328, 318, 117.36249542236328);
-bezierVertex(312, 114.36249542236328, 306, 113.36249542236328, 299, 114.36249542236328);
-endShape(CLOSE);
-  
-// NARIZ
-beginShape();
-vertex(264.01171875, 155.69921875);
-bezierVertex(264.01171875, 158.69921875, 266.01171875, 160.69921875, 268.01171875, 162.69921875);
-bezierVertex(272.01171875, 163.69921875, 275.01171875, 164.69921875, 277.01171875, 164.69921875);
-bezierVertex(280.01171875, 163.69921875, 282.01171875, 162.69921875, 283.01171875, 162.69921875);
-bezierVertex(285.01171875, 162.69921875, 286.01171875, 162.69921875, 287.01171875, 162.69921875);
-bezierVertex(288.01171875, 161.69921875, 288.01171875, 160.69921875, 288.01171875, 158.69921875);
-endShape();
-
-// Boca
-  beginShape();
-curveVertex(260.01171875, 200);
-curveVertex(269.01171875, 176.94921875);
-curveVertex(277.01171875, 177.94921875);
-curveVertex(294.01171875, 200);
-endShape();
-  
-//ceja izquierda
-  beginShape();
-vertex(264, 104.1875);
-vertex(245, 95.1875);
-endShape();
-  
-//ceja derecha
-  beginShape();
-vertex(293, 103.1875);
-vertex(316, 100.1875);
-endShape();
-        
-    }
-
-    function figuraSorprès(intensity) {
-
-    r = map(intensity, 0, 1, 255, 255);
-    g = map(intensity, 0, 1, 255, 128);
-    b = map(intensity, 0, 1, 255, 0);
-    r2 = map(intensity, 1, 0, 255, 255);
-    g2 = map(intensity, 1, 0, 255, 128);
-    b2 = map(intensity, 1, 0, 255, 0);
-
-    background(r2, g2, b2);
-
-
-// Cos
-stroke(0);
-beginShape();
-fill(r,g,b);
-curveVertex(277, 201.1875);
-curveVertex(282, 239.1875);
-curveVertex(282, 244.1875);
-curveVertex(275, 248.1875);
-curveVertex(252, 266.1875);
-curveVertex(223, 288.1875);
-curveVertex(211, 298.1875);
-curveVertex(202, 309.1875);
-curveVertex(206, 331.1875);
-curveVertex(226, 354.1875);
-curveVertex(264, 369.1875);
-curveVertex(316, 372.1875);
-curveVertex(397, 328.1875);
-curveVertex(400, 290.1875);
-curveVertex(385, 222.1875);
-curveVertex(364, 192.1875);
-curveVertex(337, 179.1875);
-curveVertex(306, 189.1875);
-curveVertex(287, 195.1875);
-endShape(CLOSE);
-  
-// Cara
-beginShape();
-curveVertex(239, 64.1875);
-curveVertex(235, 93.1875);
-curveVertex(233, 115.1875);
-curveVertex(234, 135.1875);
-curveVertex(236, 157.1875);
-curveVertex(242, 176.1875);
-curveVertex(249, 191.1875);
-curveVertex(261, 204.1875);
-curveVertex(277, 215.1875);
-curveVertex(305, 215.1875);
-curveVertex(332, 205.1875);
-curveVertex(346, 194.1875);
-curveVertex(371, 159.1875);
-curveVertex(373, 98.1875);
-curveVertex(358, 54.1875);
-curveVertex(327, 34.1875);
-curveVertex(299, 30.1875);
-curveVertex(271, 34.1875);
-curveVertex(253, 41.1875);
-curveVertex(237, 61.1875);
-endShape(CLOSE);
-
-// Ropa exterior
-beginShape();
-curveVertex(408, 285.1875);
-curveVertex(380, 294.1875);
-curveVertex(362, 310.1875);
-curveVertex(349, 323.1875);
-curveVertex(332, 342.1875);
-curveVertex(329, 349.1875);
-curveVertex(328, 352.1875);
-curveVertex(323, 352.1875);
-curveVertex(296, 353.1875);
-curveVertex(275, 351.1875);
-curveVertex(255, 345.1875);
-curveVertex(240, 338.1875);
-curveVertex(226, 326.1875);
-curveVertex(220, 314.1875);
-curveVertex(216, 303.1875);
-curveVertex(212, 295.1875);
-curveVertex(212, 286.1875);
-curveVertex(208, 285.1875);
-curveVertex(203, 288.1875);
-curveVertex(187, 302.1875);
-curveVertex(176, 313.1875);
-curveVertex(170, 321.1875);
-curveVertex(169, 329.1875);
-curveVertex(168, 331.1875);
-curveVertex(164, 334.1875);
-curveVertex(153, 339.1875);
-curveVertex(149, 347.1875);
-curveVertex(146, 356.1875);
-curveVertex(145, 370.1875);
-curveVertex(144, 380.1875);
-curveVertex(144, 390.1875);
-curveVertex(143, 393.1875);
-curveVertex(140, 395.1875);
-curveVertex(132, 398.1875);
-curveVertex(127, 404.1875);
-curveVertex(124, 411.1875);
-curveVertex(123, 419.1875);
-curveVertex(122, 424.1875);
-curveVertex(119, 425.1875);
-curveVertex(113, 427.1875);
-curveVertex(102, 433.1875);
-curveVertex(92, 443.1875);
-curveVertex(86, 453.1875);
-curveVertex(79, 468.1875);
-curveVertex(75, 480.1875);
-curveVertex(72, 494.1875);
-curveVertex(69, 508.1875);
-curveVertex(65, 523.1875);
-curveVertex(65, 538.1875);
-curveVertex(69, 546.1875);
-curveVertex(72, 555.1875);
-curveVertex(68, 565.1875);
-curveVertex(59, 579.1875);
-curveVertex(49, 592.1875);
-curveVertex(46, 599.1875);
-curveVertex(46, 599.1875);
-curveVertex(543, 599.1875);
-curveVertex(542, 598.1875);
-curveVertex(542, 572.1875);
-curveVertex(540, 549.1875);
-curveVertex(535, 526.1875);
-curveVertex(530, 498.1875);
-curveVertex(529, 470.1875);
-curveVertex(526, 444.1875);
-curveVertex(517, 422.1875);
-curveVertex(506, 399.1875);
-curveVertex(506, 395.1875);
-curveVertex(508, 370.1875);
-curveVertex(505, 357.1875);
-curveVertex(492, 334.1875);
-curveVertex(481, 317.1875);
-curveVertex(467, 302.1875);
-curveVertex(449, 289.1875);
-curveVertex(427, 284.1875);
-curveVertex(416, 284.1875);
-endShape(CLOSE);
-  
-// Pelo
-beginShape();
-curveVertex(239, 77.1875);
-curveVertex(237, 92.1875);
-curveVertex(237, 104.1875);
-curveVertex(236, 117.1875);
-curveVertex(236, 131.1875);
-curveVertex(237, 142.1875);
-curveVertex(238, 154.1875);
-curveVertex(243, 171.1875);
-curveVertex(248, 181.1875);
-curveVertex(255, 193.1875);
-curveVertex(263, 203.1875);
-curveVertex(266, 217.1875);
-curveVertex(265, 227.1875);
-curveVertex(260, 235.1875);
-curveVertex(267, 241.1875);
-curveVertex(268, 252.1875);
-curveVertex(256, 263.1875);
-curveVertex(248, 272.1875);
-curveVertex(249, 282.1875);
-curveVertex(244, 289.1875);
-curveVertex(237, 292.1875);
-curveVertex(235, 298.1875);
-curveVertex(238, 304.1875);
-curveVertex(239, 311.1875);
-curveVertex(236, 317.1875);
-curveVertex(229, 318.1875);
-curveVertex(228, 313.1875);
-curveVertex(227, 309.1875);
-curveVertex(220, 306.1875);
-curveVertex(213, 304.1875);
-curveVertex(210, 296.1875);
-curveVertex(211, 288.1875);
-curveVertex(207, 282.1875);
-curveVertex(206, 275.1875);
-curveVertex(213, 266.1875);
-curveVertex(210, 258.1875);
-curveVertex(214, 247.1875);
-curveVertex(210, 237.1875);
-curveVertex(217, 225.1875);
-curveVertex(212, 214.1875);
-curveVertex(219, 198.1875);
-curveVertex(212, 189.1875);
-curveVertex(218, 171.1875);
-curveVertex(208, 156.1875);
-curveVertex(218, 144.1875);
-curveVertex(216, 136.1875);
-curveVertex(213, 124.1875);
-curveVertex(219, 110.1875);
-curveVertex(215, 93.1875);
-curveVertex(226, 81.1875);
-curveVertex(224, 67.1875);
-curveVertex(231, 54.1875);
-curveVertex(244, 39.1875);
-curveVertex(260, 23.1875);
-curveVertex(274, 15.1875);
-curveVertex(293, 9.1875);
-curveVertex(315, 9.1875);
-curveVertex(338, 14.1875);
-curveVertex(350, 19.1875);
-curveVertex(360, 25.1875);
-curveVertex(368, 33.1875);
-curveVertex(377, 41.1875);
-curveVertex(383, 52.1875);
-curveVertex(387, 62.1875);
-curveVertex(391, 74.1875);
-curveVertex(394, 90.1875);
-curveVertex(395, 105.1875);
-curveVertex(396, 118.1875);
-curveVertex(401, 130.1875);
-curveVertex(405, 141.1875);
-curveVertex(401, 156.1875);
-curveVertex(412, 172.1875);
-curveVertex(415, 179.1875);
-curveVertex(410, 201.1875);
-curveVertex(410, 208.1875);
-curveVertex(418, 225.1875);
-curveVertex(420, 238.1875);
-curveVertex(434, 247.1875);
-curveVertex(436, 258.1875);
-curveVertex(435, 266.1875);
-curveVertex(437, 274.1875);
-curveVertex(441, 281.1875);
-curveVertex(436, 284.1875);
-curveVertex(419, 284.1875);
-curveVertex(401, 286.1875);
-curveVertex(386, 292.1875);
-curveVertex(373, 303.1875);
-curveVertex(360, 314.1875);
-curveVertex(351, 320.1875);
-curveVertex(350, 307.1875);
-curveVertex(344, 294.1875);
-curveVertex(354, 278.1875);
-curveVertex(348, 264.1875);
-curveVertex(356, 246.1875);
-curveVertex(345, 235.1875);
-curveVertex(352, 214.1875);
-curveVertex(342, 193.1875);
-curveVertex(350, 176.1875);
-curveVertex(350, 167.1875);
-curveVertex(339, 152.1875);
-curveVertex(337, 142.1875);
-curveVertex(350, 116.1875);
-curveVertex(344, 108.1875);
-curveVertex(343, 99.1875);
-curveVertex(347, 83.1875);
-curveVertex(341, 70.1875);
-curveVertex(332, 60.1875);
-curveVertex(320, 55.1875);
-curveVertex(305, 50.1875);
-curveVertex(288, 47.1875);
-curveVertex(273, 48.1875);
-curveVertex(259, 51.1875);
-curveVertex(249, 56.1875);
-curveVertex(242, 64.1875);
-endShape(CLOSE);
-  
-// OJO izquierdo
-  beginShape();
-vertex(266, 118.83333587646484);
-bezierVertex(262, 115.83333587646484, 256, 113.83333587646484, 249, 114.83333587646484);
-bezierVertex(245, 117.83333587646484, 244, 120.83333587646484, 247, 122.83333587646484);
-bezierVertex(250, 123.83333587646484, 254, 124.83333587646484, 258, 123.83333587646484);
-bezierVertex(262, 122.83333587646484, 265, 121.83333587646484, 267, 120.83333587646484);
-endShape(CLOSE);
-  
-// OJO derecha
-
-  beginShape();
-vertex(293, 119.36249542236328);
-bezierVertex(296, 122.36249542236328, 301, 123.36249542236328, 306, 123.36249542236328);
-bezierVertex(311, 122.36249542236328, 315, 120.36249542236328, 318, 117.36249542236328);
-bezierVertex(312, 114.36249542236328, 306, 113.36249542236328, 299, 114.36249542236328);
-endShape(CLOSE);
-  
-// NARIZ
-beginShape();
-vertex(264.01171875, 155.69921875);
-bezierVertex(264.01171875, 158.69921875, 266.01171875, 160.69921875, 268.01171875, 162.69921875);
-bezierVertex(272.01171875, 163.69921875, 275.01171875, 164.69921875, 277.01171875, 164.69921875);
-bezierVertex(280.01171875, 163.69921875, 282.01171875, 162.69921875, 283.01171875, 162.69921875);
-bezierVertex(285.01171875, 162.69921875, 286.01171875, 162.69921875, 287.01171875, 162.69921875);
-bezierVertex(288.01171875, 161.69921875, 288.01171875, 160.69921875, 288.01171875, 158.69921875);
-endShape();
-
-// Boca
-  beginShape();
-curveVertex(260.01171875, 200);
-curveVertex(269.01171875, 176.94921875);
-curveVertex(277.01171875, 177.94921875);
-curveVertex(294.01171875, 200);
-endShape(CLOSE);
-    }
-
-    function figuraEspantat(intensity) {
-   r = map(intensity, 0, 1, 255, 155);
-   g = map(intensity, 0, 1, 255, 0);
-   b = map(intensity, 0, 1, 255, 255);
-   r2 = map(intensity, 1, 0, 255, 155);
-   g2 = map(intensity, 1, 0, 255, 0);
-   b2 = map(intensity, 1, 0, 255, 255);
-   s = map(intensity, 0.5,1, 0, 7)
-   m = map(intensity, 1, 0.5, 0, 300)
-
-
-  background(r2, g2, b2);
-
-// Cos
-  stroke(0);
-beginShape();
-  fill(r, g, b)
-curveVertex(277, 201.1875);
-curveVertex(282, 239.1875);
-curveVertex(282, 244.1875);
-curveVertex(275, 248.1875);
-curveVertex(252, 266.1875);
-curveVertex(223, 288.1875);
-curveVertex(211, 298.1875);
-curveVertex(202, 309.1875);
-curveVertex(206, 331.1875);
-curveVertex(226, 354.1875);
-curveVertex(264, 369.1875);
-curveVertex(316, 372.1875);
-curveVertex(397, 328.1875);
-curveVertex(400, 290.1875);
-curveVertex(385, 222.1875);
-curveVertex(364, 192.1875);
-curveVertex(337, 179.1875);
-curveVertex(306, 189.1875);
-curveVertex(287, 195.1875);
-endShape(CLOSE);
-  
-// Cara
-beginShape();
-curveVertex(239, 64.1875);
-curveVertex(235, 93.1875);
-curveVertex(233, 115.1875);
-curveVertex(234, 135.1875);
-curveVertex(236, 157.1875);
-curveVertex(242, 176.1875);
-curveVertex(249, 191.1875);
-curveVertex(261, 204.1875);
-curveVertex(277, 215.1875);
-curveVertex(305, 215.1875);
-curveVertex(332, 205.1875);
-curveVertex(346, 194.1875);
-curveVertex(371, 159.1875);
-curveVertex(373, 98.1875);
-curveVertex(358, 54.1875);
-curveVertex(327, 34.1875);
-curveVertex(299, 30.1875);
-curveVertex(271, 34.1875);
-curveVertex(253, 41.1875);
-curveVertex(237, 61.1875);
-endShape(CLOSE);
-
-// Ropa exterior
-beginShape();
-curveVertex(408, 285.1875);
-curveVertex(380, 294.1875);
-curveVertex(362, 310.1875);
-curveVertex(349, 323.1875);
-curveVertex(332, 342.1875);
-curveVertex(329, 349.1875);
-curveVertex(328, 352.1875);
-curveVertex(323, 352.1875);
-curveVertex(296, 353.1875);
-curveVertex(275, 351.1875);
-curveVertex(255, 345.1875);
-curveVertex(240, 338.1875);
-curveVertex(226, 326.1875);
-curveVertex(220, 314.1875);
-curveVertex(216, 303.1875);
-curveVertex(212, 295.1875);
-curveVertex(212, 286.1875);
-curveVertex(208, 285.1875);
-curveVertex(203, 288.1875);
-curveVertex(187, 302.1875);
-curveVertex(176, 313.1875);
-curveVertex(170, 321.1875);
-curveVertex(169, 329.1875);
-curveVertex(168, 331.1875);
-curveVertex(164, 334.1875);
-curveVertex(153, 339.1875);
-curveVertex(149, 347.1875);
-curveVertex(146, 356.1875);
-curveVertex(145, 370.1875);
-curveVertex(144, 380.1875);
-curveVertex(144, 390.1875);
-curveVertex(143, 393.1875);
-curveVertex(140, 395.1875);
-curveVertex(132, 398.1875);
-curveVertex(127, 404.1875);
-curveVertex(124, 411.1875);
-curveVertex(123, 419.1875);
-curveVertex(122, 424.1875);
-curveVertex(119, 425.1875);
-curveVertex(113, 427.1875);
-curveVertex(102, 433.1875);
-curveVertex(92, 443.1875);
-curveVertex(86, 453.1875);
-curveVertex(79, 468.1875);
-curveVertex(75, 480.1875);
-curveVertex(72, 494.1875);
-curveVertex(69, 508.1875);
-curveVertex(65, 523.1875);
-curveVertex(65, 538.1875);
-curveVertex(69, 546.1875);
-curveVertex(72, 555.1875);
-curveVertex(68, 565.1875);
-curveVertex(59, 579.1875);
-curveVertex(49, 592.1875);
-curveVertex(46, 599.1875);
-curveVertex(46, 599.1875);
-curveVertex(543, 599.1875);
-curveVertex(542, 598.1875);
-curveVertex(542, 572.1875);
-curveVertex(540, 549.1875);
-curveVertex(535, 526.1875);
-curveVertex(530, 498.1875);
-curveVertex(529, 470.1875);
-curveVertex(526, 444.1875);
-curveVertex(517, 422.1875);
-curveVertex(506, 399.1875);
-curveVertex(506, 395.1875);
-curveVertex(508, 370.1875);
-curveVertex(505, 357.1875);
-curveVertex(492, 334.1875);
-curveVertex(481, 317.1875);
-curveVertex(467, 302.1875);
-curveVertex(449, 289.1875);
-curveVertex(427, 284.1875);
-curveVertex(416, 284.1875);
-endShape(CLOSE);
-  
-// Pelo
-beginShape();
-curveVertex(239, 77.1875);
-curveVertex(237, 92.1875);
-curveVertex(237, 104.1875);
-curveVertex(236, 117.1875);
-curveVertex(236, 131.1875);
-curveVertex(237, 142.1875);
-curveVertex(238, 154.1875);
-curveVertex(243, 171.1875);
-curveVertex(248, 181.1875);
-curveVertex(255, 193.1875);
-curveVertex(263, 203.1875);
-curveVertex(266, 217.1875);
-curveVertex(265, 227.1875);
-curveVertex(260, 235.1875);
-curveVertex(267, 241.1875);
-curveVertex(268, 252.1875);
-curveVertex(256, 263.1875);
-curveVertex(248, 272.1875);
-curveVertex(249, 282.1875);
-curveVertex(244, 289.1875);
-curveVertex(237, 292.1875);
-curveVertex(235, 298.1875);
-curveVertex(238, 304.1875);
-curveVertex(239, 311.1875);
-curveVertex(236, 317.1875);
-curveVertex(229, 318.1875);
-curveVertex(228, 313.1875);
-curveVertex(227, 309.1875);
-curveVertex(220, 306.1875);
-curveVertex(213, 304.1875);
-curveVertex(210, 296.1875);
-curveVertex(211, 288.1875);
-curveVertex(207, 282.1875);
-curveVertex(206, 275.1875);
-curveVertex(213, 266.1875);
-curveVertex(210, 258.1875);
-curveVertex(214, 247.1875);
-curveVertex(210, 237.1875);
-curveVertex(217, 225.1875);
-curveVertex(212, 214.1875);
-curveVertex(219, 198.1875);
-curveVertex(212, 189.1875);
-curveVertex(218, 171.1875);
-curveVertex(208, 156.1875);
-curveVertex(218, 144.1875);
-curveVertex(216, 136.1875);
-curveVertex(213, 124.1875);
-curveVertex(219, 110.1875);
-curveVertex(215, 93.1875);
-curveVertex(226, 81.1875);
-curveVertex(224, 67.1875);
-curveVertex(231, 54.1875);
-curveVertex(244, 39.1875);
-curveVertex(260, 23.1875);
-curveVertex(274, 15.1875);
-curveVertex(293, 9.1875);
-curveVertex(315, 9.1875);
-curveVertex(338, 14.1875);
-curveVertex(350, 19.1875);
-curveVertex(360, 25.1875);
-curveVertex(368, 33.1875);
-curveVertex(377, 41.1875);
-curveVertex(383, 52.1875);
-curveVertex(387, 62.1875);
-curveVertex(391, 74.1875);
-curveVertex(394, 90.1875);
-curveVertex(395, 105.1875);
-curveVertex(396, 118.1875);
-curveVertex(401, 130.1875);
-curveVertex(405, 141.1875);
-curveVertex(401, 156.1875);
-curveVertex(412, 172.1875);
-curveVertex(415, 179.1875);
-curveVertex(410, 201.1875);
-curveVertex(410, 208.1875);
-curveVertex(418, 225.1875);
-curveVertex(420, 238.1875);
-curveVertex(434, 247.1875);
-curveVertex(436, 258.1875);
-curveVertex(435, 266.1875);
-curveVertex(437, 274.1875);
-curveVertex(441, 281.1875);
-curveVertex(436, 284.1875);
-curveVertex(419, 284.1875);
-curveVertex(401, 286.1875);
-curveVertex(386, 292.1875);
-curveVertex(373, 303.1875);
-curveVertex(360, 314.1875);
-curveVertex(351, 320.1875);
-curveVertex(350, 307.1875);
-curveVertex(344, 294.1875);
-curveVertex(354, 278.1875);
-curveVertex(348, 264.1875);
-curveVertex(356, 246.1875);
-curveVertex(345, 235.1875);
-curveVertex(352, 214.1875);
-curveVertex(342, 193.1875);
-curveVertex(350, 176.1875);
-curveVertex(350, 167.1875);
-curveVertex(339, 152.1875);
-curveVertex(337, 142.1875);
-curveVertex(350, 116.1875);
-curveVertex(344, 108.1875);
-curveVertex(343, 99.1875);
-curveVertex(347, 83.1875);
-curveVertex(341, 70.1875);
-curveVertex(332, 60.1875);
-curveVertex(320, 55.1875);
-curveVertex(305, 50.1875);
-curveVertex(288, 47.1875);
-curveVertex(273, 48.1875);
-curveVertex(259, 51.1875);
-curveVertex(249, 56.1875);
-curveVertex(242, 64.1875);
-endShape(CLOSE);
-  
-// NARIZ
-beginShape();
-vertex(264.01171875, 155.69921875);
-bezierVertex(264.01171875, 158.69921875, 266.01171875, 160.69921875, 268.01171875, 162.69921875);
-bezierVertex(272.01171875, 163.69921875, 275.01171875, 164.69921875, 277.01171875, 164.69921875);
-bezierVertex(280.01171875, 163.69921875, 282.01171875, 162.69921875, 283.01171875, 162.69921875);
-bezierVertex(285.01171875, 162.69921875, 286.01171875, 162.69921875, 287.01171875, 162.69921875);
-bezierVertex(288.01171875, 161.69921875, 288.01171875, 160.69921875, 288.01171875, 158.69921875);
-endShape();
-  
-  // OJO izquierdo
-  fill(255);
-beginShape();
-vertex(244, 119.1875);//Extremo izquierdo
-vertex(248, 122.1875);
-vertex(254, 123.1875);
-vertex(261, 122.1875);
-vertex(265, 119.1875);//Extremo derecho
-vertex(261, 115.1875+(s/2));
-vertex(255, 113.1875+s);
-vertex(247, 115.1875+(s/2));
-endShape(CLOSE);
-  
-// OJO derecha
-beginShape();
-vertex(318, 118.1875);//Extremo derecho
-vertex(313, 122.1875);
-vertex(304, 123.1875);
-vertex(296, 122.1875);
-vertex(293, 120.1875);//Extremo izquierdo
-vertex(298, 115.1875+(s/2));
-vertex(305, 112.1875+s);
-vertex(313, 113.1875+s);
-endShape(CLOSE);
-
-// Boca
-beginShape();
-vertex(262, 175.1875);
-vertex(264, 182.1875);
-vertex(268, 184.1875);
-vertex(274, 187.1875);
-vertex(280, 187.1875);
-vertex(288, 185.1875);
-vertex(294, 180.1875);
-vertex(296, 175.1875);
-vertex(293, 169.1875);
-vertex(282, 167.1875);
-vertex(275, 167.1875);
-vertex(269, 168.1875);
-vertex(263, 170.1875);
-endShape(CLOSE);
-  
-//ceja izquierda
-  beginShape();
-vertex(264, 104.1875);
-vertex(245, 111.1875);
-endShape();
-  
-//ceja derecha
-  beginShape();
-vertex(293, 103.1875);
-vertex(316, 110.1875);
-endShape();
-  
-
-  //mano
-beginShape();
-  fill(r, g, b);
-  vertex(272, 143.1875+m);
-vertex(269, 141.1875+m);
-vertex(266, 142.1875+m);
-vertex(263, 144.1875+m);
-vertex(262, 147.1875+m);
-vertex(261, 151.1875+m);
-vertex(260, 155.1875+m);
-vertex(259, 160.1875+m);
-vertex(258, 165.1875+m);
-vertex(256, 170.1875+m);
-vertex(254, 176.1875+m);
-vertex(253, 180.1875+m);
-vertex(253, 184.1875+m);
-vertex(252, 189.1875+m);
-vertex(251, 196.1875+m);
-vertex(248, 193.1875+m);
-vertex(245, 192.1875+m);
-vertex(243, 193.1875+m);
-vertex(241, 196.1875+m);
-vertex(239, 199.1875+m);
-vertex(237, 202.1875+m);
-vertex(235, 208.1875+m);
-vertex(232, 212.1875+m);
-vertex(232, 216.1875+m);
-vertex(233, 219.1875+m);
-vertex(233, 224.1875+m);
-vertex(233, 227.1875+m);
-vertex(234, 230.1875+m);
-vertex(234, 234.1875+m);
-vertex(233, 237.1875+m);
-vertex(233, 240.1875+m);
-vertex(234, 242.1875+m);
-vertex(236, 244.1875+m);
-vertex(237, 247.1875+m);
-vertex(239, 250.1875+m);
-vertex(240, 251.1875+m);
-vertex(243, 255.1875+m);
-vertex(246, 259.1875+m);
-vertex(249, 262.1875+m);
-vertex(254, 266.1875+m);
-vertex(258, 274.1875+m);
-vertex(261, 280.1875+m);
-vertex(264, 288.1875+m);
-vertex(269, 299.1875+m);
-vertex(275, 309.1875+m);
-vertex(278, 314.1875+m);
-vertex(280, 318.1875+m);
-vertex(281, 322.1875+m);
-vertex(283, 328.1875+m);
-vertex(285, 334.1875+m);
-vertex(291, 345.1875+m);
-vertex(297, 359.1875+m);
-vertex(301, 368.1875+m);
-vertex(305, 375.1875+m);
-vertex(312, 385.1875+m);
-vertex(317, 396.1875+m);
-vertex(321, 408.1875+m);
-vertex(324, 418.1875+m);
-vertex(325, 431.1875+m);
-vertex(329, 446.1875+m);
-vertex(332, 462.1875+m);
-vertex(340, 522.1875+m);
-vertex(347, 598.1875+m);
-vertex(426, 598.1875+m);
-vertex(422, 538.1875+m);
-vertex(415, 491.1875+m);
-vertex(412, 466.1875+m);
-vertex(407, 444.1875+m);
-vertex(404, 427.1875+m);
-vertex(395, 408.1875+m);
-vertex(382, 382.1875+m);
-vertex(369, 362.1875+m);
-vertex(347, 331.1875+m);
-vertex(325, 296.1875+m);
-vertex(309, 266.1875+m);
-vertex(307, 262.1875+m);
-vertex(308, 257.1875+m);
-vertex(310, 250.1875+m);
-vertex(312, 242.1875+m);
-vertex(315, 230.1875+m);
-vertex(317, 223.1875+m);
-vertex(314, 209.1875+m);
-vertex(310, 198.1875+m);
-vertex(308, 187.1875+m);
-vertex(304, 178.1875+m);
-vertex(300, 171.1875+m);
-vertex(296, 166.1875+m);
-vertex(294, 165.1875+m);
-vertex(298, 181.1875+m);
-vertex(300, 204.1875+m);
-vertex(298, 181.1875+m);
-vertex(294, 165.1875+m);
-vertex(291, 154.1875+m);
-vertex(289, 149.1875+m);
-vertex(286, 146.1875+m);
-vertex(284, 146.1875+m);
-vertex(285, 156.1875+m);
-vertex(285, 169.1875+m);
-vertex(287, 205.1875+m);
-vertex(285, 169.1875+m);
-vertex(285, 156.1875+m);
-vertex(284, 146.1875+m);
-vertex(281, 142.1875+m);
-vertex(278, 140.1875+m);
-vertex(274, 141.1875+m);
-vertex(272, 144.1875+m);
-vertex(271, 168.1875+m);
-vertex(269, 206.1875+m);
-vertex(271, 168.1875+m);
-endShape();
-    }
-
-    function figuraNeutral(intensity) {
- 
+function draw() {
   background(220);
   sinus=sin(frameCount*0.02)*20;
 
@@ -2763,6 +1348,2173 @@ curveVertex(358.5, 339.609375);
 curveVertex(354.5, 339.609375);
 curveVertex(350.5, 338.609375);
 curveVertex(348.5, 334.609375);
+endShape(CLOSE);
+}
+    function figuraEnfadat(intensity) {
+function setup() {
+  createCanvas(1000, 1000);
+}
+
+function draw() {
+  background(220);
+  sinus=sin(frameCount*0.02)*20;
+
+
+beginShape();//contorn general
+ fill (87, 134, 43)
+curveVertex(406.5, 146.609375);
+curveVertex(426.5, 137.609375);
+curveVertex(443.5, 132.609375);
+curveVertex(462.5, 131.609375);
+curveVertex(490.5, 130.609375);
+curveVertex(521.5, 134.609375);
+curveVertex(558.5, 149.609375);
+curveVertex(574.5, 162.609375);
+curveVertex(598.5, 188.609375);
+curveVertex(607.5, 212.609375);
+curveVertex(615.5, 237.609375);
+curveVertex(621.5, 263.609375);
+curveVertex(624.5, 283.609375);
+curveVertex(631.5, 302.609375);
+curveVertex(635.5, 322.609375);
+curveVertex(644.5, 336.609375);
+curveVertex(652.5, 353.609375);
+curveVertex(662.5, 367.609375);
+curveVertex(674.5, 384.609375);
+curveVertex(687.5, 398.609375);
+curveVertex(702.5, 426.609375);
+curveVertex(711.5, 448.609375);
+curveVertex(718.5, 472.609375);
+curveVertex(719.5, 492.609375);
+curveVertex(719.5, 514.609375);
+curveVertex(718.5, 539.609375);
+curveVertex(717.5, 555.609375);
+curveVertex(709.5, 570.609375);
+curveVertex(703.5, 592.609375);
+curveVertex(691.5, 609.609375);
+curveVertex(672.5, 629.609375);
+curveVertex(654.5, 644.609375);
+curveVertex(634.5, 653.609375);
+curveVertex(599.5, 665.609375);
+curveVertex(570.5, 672.609375);
+curveVertex(540.5, 679.609375);
+curveVertex(500.5, 680.609375);
+curveVertex(477.5, 681.609375);
+curveVertex(435.5, 682.609375);
+curveVertex(402.5, 677.609375);
+curveVertex(367.5, 669.609375);
+curveVertex(340.5, 656.609375);
+curveVertex(321.5, 644.609375);
+curveVertex(303.5, 629.609375);
+curveVertex(284.5, 605.609375);
+curveVertex(272.5, 581.609375);
+curveVertex(264.5, 556.609375);
+curveVertex(260.5, 532.609375);
+curveVertex(261.5, 505.609375);
+curveVertex(264.5, 481.609375);
+curveVertex(271.5, 455.609375);
+curveVertex(278.5, 437.609375);
+curveVertex(266.5, 449.609375);
+curveVertex(257.5, 463.609375);
+curveVertex(243.5, 483.609375);
+curveVertex(229.5, 506.609375);
+curveVertex(219.5, 528.609375);
+curveVertex(215.5, 546.609375);
+curveVertex(215.5, 570.609375);
+curveVertex(226.5, 585.609375);
+curveVertex(240.5, 592.609375);
+curveVertex(252.5, 580.609375);
+curveVertex(261.5, 564.609375);
+curveVertex(264.5, 558.609375);
+curveVertex(262.5, 533.609375);
+curveVertex(258.5, 504.609375);
+curveVertex(264.5, 478.609375);
+curveVertex(272.5, 452.609375);
+curveVertex(278.5, 434.609375);
+curveVertex(285.5, 420.609375);
+curveVertex(294.5, 408.609375);
+curveVertex(305.5, 398.609375);
+curveVertex(314.5, 383.609375);
+curveVertex(323.5, 366.609375);
+curveVertex(330.5, 349.609375);
+curveVertex(338.5, 320.609375);
+curveVertex(341.5, 303.609375);
+curveVertex(344.5, 284.609375);
+curveVertex(350.5, 259.609375);
+curveVertex(350.5, 250.609375);
+curveVertex(352.5, 229.609375);
+curveVertex(356.5, 209.609375);
+curveVertex(365.5, 188.609375);
+curveVertex(377.5, 169.609375);
+curveVertex(395.5, 154.609375);
+curveVertex(408.5, 144.609375);
+endShape(CLOSE);
+
+beginShape();//contorn interior
+fill(222, 222, 124)
+vertex(448.5, 132.609375);
+vertex(460.5, 132.609375);
+vertex(473.5, 135.609375);
+vertex(492.5, 141.609375);
+vertex(511.5, 149.609375);
+vertex(532.5, 163.609375);
+vertex(542.5, 174.609375);
+vertex(554.5, 194.609375);
+vertex(563.5, 220.609375);
+vertex(564.5, 241.609375);
+vertex(564.5, 258.609375);
+vertex(568.5, 281.609375);
+vertex(572.5, 305.609375);
+vertex(577.5, 332.609375);
+vertex(584.5, 353.609375);
+vertex(595.5, 373.609375);
+vertex(611.5, 400.609375);
+vertex(624.5, 416.609375);
+vertex(636.5, 439.609375);
+vertex(645.5, 461.609375);
+vertex(651.5, 486.609375);
+vertex(653.5, 505.609375);
+vertex(654.5, 529.609375);
+vertex(653.5, 546.609375);
+vertex(649.5, 564.609375);
+vertex(642.5, 583.609375);
+vertex(633.5, 600.609375);
+vertex(622.5, 614.609375);
+vertex(611.5, 628.609375);
+vertex(595.5, 643.609375);
+vertex(576.5, 658.609375);
+vertex(551.5, 667.609375);
+vertex(533.5, 673.609375);
+vertex(485.5, 677.609375);
+vertex(455.5, 677.609375);
+vertex(418.5, 676.609375);
+vertex(375.5, 666.609375);
+vertex(350.5, 658.609375);
+vertex(330.5, 646.609375);
+vertex(304.5, 627.609375);
+vertex(296.5, 613.609375);
+vertex(286.5, 597.609375);
+vertex(278.5, 584.609375);
+vertex(272.5, 565.609375);
+vertex(267.5, 554.609375);
+vertex(266.5, 535.609375);
+vertex(265.5, 515.609375);
+vertex(265.5, 490.609375);
+vertex(269.5, 469.609375);
+vertex(275.5, 449.609375);
+vertex(286.5, 424.609375);
+vertex(300.5, 401.609375);
+vertex(314.5, 380.609375);
+vertex(325.5, 360.609375);
+vertex(331.5, 347.609375);
+vertex(350.5, 249.609375);
+vertex(350.5, 228.609375);
+vertex(355.5, 209.609375);
+vertex(366.5, 185.609375);
+vertex(384.5, 162.609375);
+vertex(409.5, 145.609375);
+vertex(429.5, 135.609375);
+vertex(449.5, 131.609375);
+endShape();
+
+beginShape();//braç esquerre
+  fill(98, 150, 55)
+curveVertex(635.5, 385.609375);
+curveVertex(646.5, 386.609375);
+curveVertex(658.5, 400.609375);
+curveVertex(671.5, 418.609375);
+curveVertex(681.5, 432.609375);
+curveVertex(695.5, 454.609375);
+curveVertex(707.5, 473.609375);
+curveVertex(718.5, 492.609375);
+curveVertex(724.5, 511.609375);
+curveVertex(731.5, 536.609375);
+curveVertex(731.5, 562.609375);
+curveVertex(721.5, 573.609375);
+curveVertex(706.5, 571.609375);
+curveVertex(694.5, 557.609375);
+curveVertex(680.5, 532.609375);
+curveVertex(669.5, 505.609375);
+curveVertex(659.5, 476.609375);
+curveVertex(649.5, 451.609375);
+curveVertex(641.5, 422.609375);
+curveVertex(635.5, 398.609375);
+curveVertex(635.5, 382.609375);
+endShape(CLOSE);
+
+beginShape();//os
+  fill(173, 118, 62)
+curveVertex(443.5, 410.609375);
+curveVertex(423.5, 412.609375);
+curveVertex(403.5, 422.609375);
+curveVertex(387.5, 436.609375);
+curveVertex(371.5, 454.609375);
+curveVertex(363.5, 470.609375);
+curveVertex(356.5, 489.609375);
+curveVertex(354.5, 509.609375);
+curveVertex(356.5, 531.609375);
+curveVertex(362.5, 552.609375);
+curveVertex(373.5, 568.609375);
+curveVertex(385.5, 586.609375);
+curveVertex(396.5, 596.609375);
+curveVertex(414.5, 608.609375);
+curveVertex(433.5, 615.609375);
+curveVertex(449.5, 617.609375);
+curveVertex(471.5, 617.609375);
+curveVertex(488.5, 613.609375);
+curveVertex(508.5, 603.609375);
+curveVertex(525.5, 586.609375);
+curveVertex(541.5, 571.609375);
+curveVertex(550.5, 550.609375);
+curveVertex(556.5, 532.609375);
+curveVertex(556.5, 516.609375);
+curveVertex(554.5, 498.609375);
+curveVertex(549.5, 480.609375);
+curveVertex(543.5, 463.609375);
+curveVertex(531.5, 444.609375);
+curveVertex(516.5, 429.609375);
+curveVertex(498.5, 417.609375);
+curveVertex(477.5, 409.609375);
+curveVertex(457.5, 409.609375);
+curveVertex(442.5, 410.609375);
+endShape(CLOSE);
+
+beginShape();//ull dret
+  fill(255, 252, 243)
+curveVertex(348.5, 253.609375);//he tret 10 numeros a la segona columna de numeros.
+curveVertex(335.5, 260.609375);
+curveVertex(324.5, 271.609375);
+curveVertex(317.5, 284.609375);
+curveVertex(314.5, 299.609375);
+curveVertex(314.5, 317.609375);
+curveVertex(319.5, 327.609375);
+curveVertex(330.5, 341.609375);
+curveVertex(340.5, 350.609375);
+curveVertex(354.5, 360.609375);
+curveVertex(370.5, 362.609375);
+curveVertex(384.5, 360.609375);
+curveVertex(398.5, 353.609375);
+curveVertex(414.5, 341.609375);
+curveVertex(424.5, 324.609375);
+curveVertex(427.5, 311.609375);
+curveVertex(427.5, 293.609375);
+curveVertex(419.5, 275.609375);
+curveVertex(404.5, 258.609375);
+curveVertex(388.5, 250.609375);
+curveVertex(368.5, 249.609375);
+curveVertex(348.5, 249.609375);
+endShape(CLOSE);
+
+beginShape();//ull esquerre
+  fill(255, 252, 243)
+curveVertex(508.5, 249.609375);
+curveVertex(492.5, 254.609375);
+curveVertex(478.5, 263.609375);
+curveVertex(469.5, 274.609375);
+curveVertex(463.5, 287.609375);
+curveVertex(459.5, 300.609375);
+curveVertex(459.5, 312.609375);
+curveVertex(462.5, 324.609375);
+curveVertex(467.5, 335.609375);
+curveVertex(477.5, 346.609375);
+curveVertex(490.5, 355.609375);
+curveVertex(503.5, 361.609375);
+curveVertex(519.5, 363.609375);
+curveVertex(536.5, 360.609375);
+curveVertex(547.5, 352.609375);
+curveVertex(560.5, 342.609375);
+curveVertex(569.5, 324.609375);
+curveVertex(571.5, 308.609375);
+curveVertex(569.5, 290.609375);
+curveVertex(565.5, 274.609375);
+curveVertex(555.5, 264.609375);
+curveVertex(545.5, 255.609375);
+curveVertex(536.5, 251.609375);
+curveVertex(525.5, 249.609375);
+curveVertex(512.5, 250.609375);
+endShape(CLOSE);
+
+beginShape();//boca
+  fill(0, 0, 0)
+curveVertex(394.5, 403.609375+sinus/3);
+curveVertex(407.5, 396.609375+sinus/3);
+curveVertex(421.5, 390.609375);
+curveVertex(436.5, 387.609375);
+curveVertex(456.5, 386.609375);
+curveVertex(476.5, 391.609375+sinus/3);
+curveVertex(492.5, 401.609375+sinus/3);
+endShape();
+
+beginShape();//cella esquerre
+  fill(0, 0, 0)
+vertex(472.5, 240.609375+sinus);
+vertex(475.5, 245.609375+sinus);
+vertex(482.5, 242.609375+sinus);
+vertex(494.5, 237.609375+sinus);
+vertex(505.5, 234.609375+sinus);
+vertex(517.5, 229.609375+sinus);
+vertex(529.5, 224.609375+sinus);
+vertex(527.5, 217.609375+sinus);
+vertex(519.5, 220.609375+sinus);
+vertex(511.5, 223.609375+sinus);
+vertex(502.5, 226.609375+sinus);
+vertex(492.5, 229.609375+sinus);
+vertex(484.5, 233.609375+sinus);
+vertex(473.5, 237.609375+sinus);
+endShape();
+  
+beginShape();//cella dreta
+  fill(0, 0, 0)
+vertex(414.5, 243.609375+sinus);
+vertex(395.5, 234.609375+sinus);
+vertex(380.5, 227.609375+sinus);
+vertex(369.5, 220.609375+sinus);
+vertex(371.5, 219.609375+sinus);
+vertex(382.5, 228.609375+sinus);
+vertex(397.5, 234.609375+sinus);
+vertex(414.5, 243.609375+sinus);
+vertex(415.5, 238.609375+sinus);
+vertex(410.5, 235.609375+sinus);
+vertex(403.5, 231.609375+sinus);
+vertex(397.5, 227.609375+sinus);
+vertex(387.5, 223.609375+sinus);
+vertex(372.5, 217.609375+sinus);
+vertex(369.5, 221.609375+sinus);
+endShape();
+
+beginShape();//cama dreta
+  fill(87, 134, 43)
+curveVertex(397.5, 652.609375);
+curveVertex(395.5, 665.609375);
+curveVertex(395.5, 677.609375);
+curveVertex(394.5, 693.609375);
+curveVertex(393.5, 708.609375);
+curveVertex(394.5, 727.609375);
+curveVertex(387.5, 727.609375);
+curveVertex(382.5, 732.609375);
+curveVertex(381.5, 738.609375);
+curveVertex(381.5, 753.609375);
+curveVertex(378.5, 770.609375);
+curveVertex(385.5, 773.609375);
+curveVertex(393.5, 778.609375);
+curveVertex(398.5, 780.609375);
+curveVertex(388.5, 777.609375);
+curveVertex(377.5, 774.609375);
+curveVertex(367.5, 774.609375);
+curveVertex(359.5, 781.609375);
+curveVertex(351.5, 789.609375);
+curveVertex(351.5, 799.609375);
+curveVertex(352.5, 808.609375);
+curveVertex(359.5, 815.609375);
+curveVertex(366.5, 820.609375);
+curveVertex(377.5, 827.609375);
+curveVertex(391.5, 828.609375);
+curveVertex(402.5, 828.609375);
+curveVertex(416.5, 828.609375);
+curveVertex(430.5, 825.609375);
+curveVertex(444.5, 820.609375);
+curveVertex(453.5, 811.609375);
+curveVertex(453.5, 793.609375);
+curveVertex(450.5, 781.609375);
+curveVertex(447.5, 765.609375);
+curveVertex(438.5, 752.609375);
+curveVertex(440.5, 742.609375);
+curveVertex(440.5, 731.609375);
+curveVertex(433.5, 725.609375);
+curveVertex(430.5, 716.609375);
+curveVertex(429.5, 706.609375);
+curveVertex(429.5, 696.609375);
+curveVertex(431.5, 681.609375);
+curveVertex(431.5, 669.609375);
+curveVertex(430.5, 657.609375);
+endShape();
+  
+beginShape();//cama esquerre
+  fill(87, 134, 43)
+curveVertex(496.5, 663.609375);
+curveVertex(498.5, 678.609375);
+curveVertex(498.5, 695.609375);
+curveVertex(499.5, 709.609375);
+curveVertex(498.5, 724.609375);
+curveVertex(493.5, 729.609375);
+curveVertex(489.5, 732.609375);
+curveVertex(487.5, 742.609375);
+curveVertex(492.5, 749.609375);
+curveVertex(485.5, 758.609375);
+curveVertex(482.5, 769.609375);
+curveVertex(480.5, 780.609375);
+curveVertex(479.5, 794.609375);
+curveVertex(479.5, 810.609375);
+curveVertex(497.5, 821.609375);
+curveVertex(521.5, 828.609375);
+curveVertex(541.5, 828.609375);
+curveVertex(555.5, 828.609375);
+curveVertex(569.5, 823.609375);
+curveVertex(577.5, 815.609375);
+curveVertex(580.5, 802.609375);
+curveVertex(578.5, 787.609375);
+curveVertex(568.5, 777.609375);
+curveVertex(550.5, 773.609375);
+curveVertex(533.5, 776.609375);
+curveVertex(551.5, 771.609375);
+curveVertex(549.5, 764.609375);
+curveVertex(545.5, 750.609375);
+curveVertex(550.5, 741.609375);
+curveVertex(546.5, 731.609375);
+curveVertex(536.5, 724.609375);
+curveVertex(536.5, 709.609375);
+curveVertex(535.5, 691.609375);
+curveVertex(535.5, 678.609375);
+curveVertex(533.5, 660.609375);
+endShape();
+  
+beginShape();//detall de la bamba
+curveVertex(340.5, 809.609375);
+curveVertex(360.5, 814.609375);
+curveVertex(375.5, 815.609375);
+curveVertex(391.5, 817.609375);
+curveVertex(407.5, 817.609375);
+curveVertex(423.5, 815.609375);
+curveVertex(438.5, 808.609375);
+curveVertex(448.5, 806.609375);
+curveVertex(458.5, 800.609375);
+curveVertex(465.5, 794.609375);
+endShape();
+  
+beginShape();//detall de la bamba
+curveVertex(470.5, 797.609375);
+curveVertex(485.5, 806.609375);
+curveVertex(497.5, 813.609375);
+curveVertex(512.5, 817.609375);
+curveVertex(528.5, 817.609375);
+curveVertex(538.5, 817.609375);
+curveVertex(554.5, 815.609375);
+curveVertex(566.5, 814.609375);
+curveVertex(577.5, 814.609375);
+curveVertex(587.5, 811.609375);
+endShape();
+  
+beginShape();//detall de la bamba
+    fill(254, 253, 219)
+curveVertex(470.5, 797.609375);
+curveVertex(485.5, 806.609375);
+curveVertex(497.5, 813.609375);
+curveVertex(512.5, 817.609375);
+curveVertex(528.5, 817.609375);
+curveVertex(538.5, 817.609375);
+curveVertex(554.5, 815.609375);
+curveVertex(566.5, 814.609375);
+curveVertex(577.5, 814.609375);
+curveVertex(587.5, 811.609375);
+curveVertex(576.5, 814.609375);
+curveVertex(565.5, 814.609375);
+curveVertex(555.5, 814.609375);
+curveVertex(539.5, 817.609375);
+curveVertex(527.5, 817.609375);
+curveVertex(512.5, 816.609375);
+curveVertex(495.5, 812.609375);
+curveVertex(485.5, 806.609375);
+curveVertex(474.5, 797.609375);
+curveVertex(461.5, 790.609375);
+endShape();
+  
+beginShape();//pupila de l'ull dret
+  fill(0, 0, 0)
+curveVertex(363.5, 267.609375);
+curveVertex(349.5, 275.609375);
+curveVertex(339.5, 286.609375);
+curveVertex(336.5, 300.609375);
+curveVertex(338.5, 315.609375);
+curveVertex(344.5, 328.609375);
+curveVertex(356.5, 338.609375);
+curveVertex(366.5, 343.609375);
+curveVertex(379.5, 343.609375);
+curveVertex(394.5, 341.609375);
+curveVertex(403.5, 335.609375);
+curveVertex(410.5, 327.609375);
+curveVertex(414.5, 316.609375);
+curveVertex(415.5, 304.609375);
+curveVertex(415.5, 294.609375);
+curveVertex(412.5, 284.609375);
+curveVertex(405.5, 274.609375);
+curveVertex(395.5, 267.609375);
+curveVertex(384.5, 265.609375);
+curveVertex(371.5, 264.609375);
+curveVertex(364.5, 267.609375);
+endShape(CLOSE);
+  
+beginShape();//pupila d'ull esquerre
+  fill(0, 0, 0)
+curveVertex(486.5, 270.609375);
+curveVertex(497.5, 266.609375);
+curveVertex(512.5, 265.609375);
+curveVertex(526.5, 267.609375);
+curveVertex(538.5, 273.609375);
+curveVertex(545.5, 285.609375);
+curveVertex(548.5, 301.609375);
+curveVertex(549.5, 318.609375);
+curveVertex(541.5, 332.609375);
+curveVertex(533.5, 341.609375);
+curveVertex(519.5, 346.609375);
+curveVertex(507.5, 346.609375);
+curveVertex(495.5, 345.609375);
+curveVertex(482.5, 338.609375);
+curveVertex(476.5, 329.609375);
+curveVertex(470.5, 320.609375);
+curveVertex(468.5, 307.609375);
+curveVertex(472.5, 290.609375);
+curveVertex(477.5, 278.609375);
+curveVertex(489.5, 269.609375);
+endShape(CLOSE);
+  
+beginShape();//brill gran de l'ull esquerre
+  fill(252, 255, 254)
+curveVertex(493.5, 287.609375);
+curveVertex(501.5, 285.609375);
+curveVertex(511.5, 287.609375);
+curveVertex(517.5, 293.609375);
+curveVertex(518.5, 301.609375);
+curveVertex(518.5, 310.609375);
+curveVertex(515.5, 316.609375);
+curveVertex(510.5, 321.609375);
+curveVertex(506.5, 323.609375);
+curveVertex(499.5, 324.609375);
+curveVertex(492.5, 323.609375);
+curveVertex(485.5, 320.609375);
+curveVertex(480.5, 315.609375);
+curveVertex(477.5, 309.609375);
+curveVertex(477.5, 301.609375);
+curveVertex(480.5, 295.609375);
+curveVertex(484.5, 289.609375);
+curveVertex(490.5, 286.609375);
+endShape(CLOSE);
+  
+beginShape();//brill gran de l'ull dret
+  fill(252, 255, 254)
+curveVertex(348.5, 292.609375);
+curveVertex(355.5, 286.609375);
+curveVertex(363.5, 283.609375);
+curveVertex(369.5, 283.609375);
+curveVertex(376.5, 285.609375);
+curveVertex(382.5, 290.609375);
+curveVertex(384.5, 296.609375);
+curveVertex(385.5, 304.609375);
+curveVertex(383.5, 310.609375);
+curveVertex(380.5, 316.609375);
+curveVertex(374.5, 321.609375);
+curveVertex(367.5, 324.609375);
+curveVertex(356.5, 322.609375);
+curveVertex(348.5, 317.609375);
+curveVertex(345.5, 313.609375);
+curveVertex(343.5, 307.609375);
+curveVertex(343.5, 298.609375);
+curveVertex(348.5, 290.609375);
+endShape(CLOSE);
+  
+beginShape();//brill petit de l'ull esquerre
+curveVertex(486.5, 328.609375);
+curveVertex(491.5, 327.609375);
+curveVertex(495.5, 329.609375);
+curveVertex(497.5, 334.609375);
+curveVertex(495.5, 337.609375);
+curveVertex(491.5, 339.609375);
+curveVertex(487.5, 339.609375);
+curveVertex(483.5, 336.609375);
+curveVertex(483.5, 332.609375);
+curveVertex(487.5, 330.609375);
+endShape(CLOSE);
+  
+beginShape();//brill petit de l'ull dret
+curveVertex(349.5, 332.609375);
+curveVertex(350.5, 328.609375);
+curveVertex(354.5, 327.609375);
+curveVertex(358.5, 327.609375);
+curveVertex(362.5, 330.609375);
+curveVertex(362.5, 336.609375);
+curveVertex(358.5, 339.609375);
+curveVertex(354.5, 339.609375);
+curveVertex(350.5, 338.609375);
+curveVertex(348.5, 334.609375);
+endShape(CLOSE);
+}
+
+    function figuraFastiguejat(intensity) {
+
+    function figuraSorprès(intensity) {
+function setup() {
+  createCanvas(1000, 1000);
+}
+
+function draw() {
+  background(220);
+  sinus=sin(frameCount*0.02)*20;
+
+
+beginShape();//contorn general
+ fill (87, 134, 43)
+curveVertex(406.5, 146.609375);
+curveVertex(426.5, 137.609375);
+curveVertex(443.5, 132.609375);
+curveVertex(462.5, 131.609375);
+curveVertex(490.5, 130.609375);
+curveVertex(521.5, 134.609375);
+curveVertex(558.5, 149.609375);
+curveVertex(574.5, 162.609375);
+curveVertex(598.5, 188.609375);
+curveVertex(607.5, 212.609375);
+curveVertex(615.5, 237.609375);
+curveVertex(621.5, 263.609375);
+curveVertex(624.5, 283.609375);
+curveVertex(631.5, 302.609375);
+curveVertex(635.5, 322.609375);
+curveVertex(644.5, 336.609375);
+curveVertex(652.5, 353.609375);
+curveVertex(662.5, 367.609375);
+curveVertex(674.5, 384.609375);
+curveVertex(687.5, 398.609375);
+curveVertex(702.5, 426.609375);
+curveVertex(711.5, 448.609375);
+curveVertex(718.5, 472.609375);
+curveVertex(719.5, 492.609375);
+curveVertex(719.5, 514.609375);
+curveVertex(718.5, 539.609375);
+curveVertex(717.5, 555.609375);
+curveVertex(709.5, 570.609375);
+curveVertex(703.5, 592.609375);
+curveVertex(691.5, 609.609375);
+curveVertex(672.5, 629.609375);
+curveVertex(654.5, 644.609375);
+curveVertex(634.5, 653.609375);
+curveVertex(599.5, 665.609375);
+curveVertex(570.5, 672.609375);
+curveVertex(540.5, 679.609375);
+curveVertex(500.5, 680.609375);
+curveVertex(477.5, 681.609375);
+curveVertex(435.5, 682.609375);
+curveVertex(402.5, 677.609375);
+curveVertex(367.5, 669.609375);
+curveVertex(340.5, 656.609375);
+curveVertex(321.5, 644.609375);
+curveVertex(303.5, 629.609375);
+curveVertex(284.5, 605.609375);
+curveVertex(272.5, 581.609375);
+curveVertex(264.5, 556.609375);
+curveVertex(260.5, 532.609375);
+curveVertex(261.5, 505.609375);
+curveVertex(264.5, 481.609375);
+curveVertex(271.5, 455.609375);
+curveVertex(278.5, 437.609375);
+curveVertex(266.5, 449.609375);
+curveVertex(257.5, 463.609375);
+curveVertex(243.5, 483.609375);
+curveVertex(229.5, 506.609375);
+curveVertex(219.5, 528.609375);
+curveVertex(215.5, 546.609375);
+curveVertex(215.5, 570.609375);
+curveVertex(226.5, 585.609375);
+curveVertex(240.5, 592.609375);
+curveVertex(252.5, 580.609375);
+curveVertex(261.5, 564.609375);
+curveVertex(264.5, 558.609375);
+curveVertex(262.5, 533.609375);
+curveVertex(258.5, 504.609375);
+curveVertex(264.5, 478.609375);
+curveVertex(272.5, 452.609375);
+curveVertex(278.5, 434.609375);
+curveVertex(285.5, 420.609375);
+curveVertex(294.5, 408.609375);
+curveVertex(305.5, 398.609375);
+curveVertex(314.5, 383.609375);
+curveVertex(323.5, 366.609375);
+curveVertex(330.5, 349.609375);
+curveVertex(338.5, 320.609375);
+curveVertex(341.5, 303.609375);
+curveVertex(344.5, 284.609375);
+curveVertex(350.5, 259.609375);
+curveVertex(350.5, 250.609375);
+curveVertex(352.5, 229.609375);
+curveVertex(356.5, 209.609375);
+curveVertex(365.5, 188.609375);
+curveVertex(377.5, 169.609375);
+curveVertex(395.5, 154.609375);
+curveVertex(408.5, 144.609375);
+endShape(CLOSE);
+
+beginShape();//contorn interior
+fill(222, 222, 124)
+vertex(448.5, 132.609375);
+vertex(460.5, 132.609375);
+vertex(473.5, 135.609375);
+vertex(492.5, 141.609375);
+vertex(511.5, 149.609375);
+vertex(532.5, 163.609375);
+vertex(542.5, 174.609375);
+vertex(554.5, 194.609375);
+vertex(563.5, 220.609375);
+vertex(564.5, 241.609375);
+vertex(564.5, 258.609375);
+vertex(568.5, 281.609375);
+vertex(572.5, 305.609375);
+vertex(577.5, 332.609375);
+vertex(584.5, 353.609375);
+vertex(595.5, 373.609375);
+vertex(611.5, 400.609375);
+vertex(624.5, 416.609375);
+vertex(636.5, 439.609375);
+vertex(645.5, 461.609375);
+vertex(651.5, 486.609375);
+vertex(653.5, 505.609375);
+vertex(654.5, 529.609375);
+vertex(653.5, 546.609375);
+vertex(649.5, 564.609375);
+vertex(642.5, 583.609375);
+vertex(633.5, 600.609375);
+vertex(622.5, 614.609375);
+vertex(611.5, 628.609375);
+vertex(595.5, 643.609375);
+vertex(576.5, 658.609375);
+vertex(551.5, 667.609375);
+vertex(533.5, 673.609375);
+vertex(485.5, 677.609375);
+vertex(455.5, 677.609375);
+vertex(418.5, 676.609375);
+vertex(375.5, 666.609375);
+vertex(350.5, 658.609375);
+vertex(330.5, 646.609375);
+vertex(304.5, 627.609375);
+vertex(296.5, 613.609375);
+vertex(286.5, 597.609375);
+vertex(278.5, 584.609375);
+vertex(272.5, 565.609375);
+vertex(267.5, 554.609375);
+vertex(266.5, 535.609375);
+vertex(265.5, 515.609375);
+vertex(265.5, 490.609375);
+vertex(269.5, 469.609375);
+vertex(275.5, 449.609375);
+vertex(286.5, 424.609375);
+vertex(300.5, 401.609375);
+vertex(314.5, 380.609375);
+vertex(325.5, 360.609375);
+vertex(331.5, 347.609375);
+vertex(350.5, 249.609375);
+vertex(350.5, 228.609375);
+vertex(355.5, 209.609375);
+vertex(366.5, 185.609375);
+vertex(384.5, 162.609375);
+vertex(409.5, 145.609375);
+vertex(429.5, 135.609375);
+vertex(449.5, 131.609375);
+endShape();
+
+beginShape();//braç esquerre
+  fill(98, 150, 55)
+curveVertex(635.5, 385.609375);
+curveVertex(646.5, 386.609375);
+curveVertex(658.5, 400.609375);
+curveVertex(671.5, 418.609375);
+curveVertex(681.5, 432.609375);
+curveVertex(695.5, 454.609375);
+curveVertex(707.5, 473.609375);
+curveVertex(718.5, 492.609375);
+curveVertex(724.5, 511.609375);
+curveVertex(731.5, 536.609375);
+curveVertex(731.5, 562.609375);
+curveVertex(721.5, 573.609375);
+curveVertex(706.5, 571.609375);
+curveVertex(694.5, 557.609375);
+curveVertex(680.5, 532.609375);
+curveVertex(669.5, 505.609375);
+curveVertex(659.5, 476.609375);
+curveVertex(649.5, 451.609375);
+curveVertex(641.5, 422.609375);
+curveVertex(635.5, 398.609375);
+curveVertex(635.5, 382.609375);
+endShape(CLOSE);
+
+beginShape();//os
+  fill(173, 118, 62)
+curveVertex(443.5, 410.609375);
+curveVertex(423.5, 412.609375);
+curveVertex(403.5, 422.609375);
+curveVertex(387.5, 436.609375);
+curveVertex(371.5, 454.609375);
+curveVertex(363.5, 470.609375);
+curveVertex(356.5, 489.609375);
+curveVertex(354.5, 509.609375);
+curveVertex(356.5, 531.609375);
+curveVertex(362.5, 552.609375);
+curveVertex(373.5, 568.609375);
+curveVertex(385.5, 586.609375);
+curveVertex(396.5, 596.609375);
+curveVertex(414.5, 608.609375);
+curveVertex(433.5, 615.609375);
+curveVertex(449.5, 617.609375);
+curveVertex(471.5, 617.609375);
+curveVertex(488.5, 613.609375);
+curveVertex(508.5, 603.609375);
+curveVertex(525.5, 586.609375);
+curveVertex(541.5, 571.609375);
+curveVertex(550.5, 550.609375);
+curveVertex(556.5, 532.609375);
+curveVertex(556.5, 516.609375);
+curveVertex(554.5, 498.609375);
+curveVertex(549.5, 480.609375);
+curveVertex(543.5, 463.609375);
+curveVertex(531.5, 444.609375);
+curveVertex(516.5, 429.609375);
+curveVertex(498.5, 417.609375);
+curveVertex(477.5, 409.609375);
+curveVertex(457.5, 409.609375);
+curveVertex(442.5, 410.609375);
+endShape(CLOSE);
+
+beginShape();//ull dret
+  fill(255, 252, 243)
+curveVertex(348.5, 253.609375);//he tret 10 numeros a la segona columna de numeros.
+curveVertex(335.5, 260.609375);
+curveVertex(324.5, 271.609375);
+curveVertex(317.5, 284.609375);
+curveVertex(314.5, 299.609375);
+curveVertex(314.5, 317.609375);
+curveVertex(319.5, 327.609375);
+curveVertex(330.5, 341.609375);
+curveVertex(340.5, 350.609375);
+curveVertex(354.5, 360.609375);
+curveVertex(370.5, 362.609375);
+curveVertex(384.5, 360.609375);
+curveVertex(398.5, 353.609375);
+curveVertex(414.5, 341.609375);
+curveVertex(424.5, 324.609375);
+curveVertex(427.5, 311.609375);
+curveVertex(427.5, 293.609375);
+curveVertex(419.5, 275.609375);
+curveVertex(404.5, 258.609375);
+curveVertex(388.5, 250.609375);
+curveVertex(368.5, 249.609375);
+curveVertex(348.5, 249.609375);
+endShape(CLOSE);
+
+beginShape();//ull esquerre
+  fill(255, 252, 243)
+curveVertex(508.5, 249.609375);
+curveVertex(492.5, 254.609375);
+curveVertex(478.5, 263.609375);
+curveVertex(469.5, 274.609375);
+curveVertex(463.5, 287.609375);
+curveVertex(459.5, 300.609375);
+curveVertex(459.5, 312.609375);
+curveVertex(462.5, 324.609375);
+curveVertex(467.5, 335.609375);
+curveVertex(477.5, 346.609375);
+curveVertex(490.5, 355.609375);
+curveVertex(503.5, 361.609375);
+curveVertex(519.5, 363.609375);
+curveVertex(536.5, 360.609375);
+curveVertex(547.5, 352.609375);
+curveVertex(560.5, 342.609375);
+curveVertex(569.5, 324.609375);
+curveVertex(571.5, 308.609375);
+curveVertex(569.5, 290.609375);
+curveVertex(565.5, 274.609375);
+curveVertex(555.5, 264.609375);
+curveVertex(545.5, 255.609375);
+curveVertex(536.5, 251.609375);
+curveVertex(525.5, 249.609375);
+curveVertex(512.5, 250.609375);
+endShape(CLOSE);
+
+beginShape();//boca
+  fill(0, 0, 0)
+curveVertex(444.44791412353516, 355.4513854980469);
+curveVertex(432.44791412353516, 354.4513854980469);
+curveVertex(422.44791412353516, 359.4513854980469);
+curveVertex(419.44791412353516, 371.4513854980469);
+curveVertex(419.44791412353516, 388.4513854980469);
+curveVertex(421.44791412353516, 398.4513854980469);
+curveVertex(434.44791412353516, 405.4513854980469);
+curveVertex(449.44791412353516, 406.4513854980469);
+curveVertex(456.44791412353516, 394.4513854980469);
+curveVertex(458.44791412353516, 378.4513854980469);
+curveVertex(458.44791412353516, 364.4513854980469);
+curveVertex(456.44791412353516, 357.4513854980469);
+curveVertex(444.44791412353516, 354.4513854980469);
+endShape();
+  
+beginShape();//cella esquerre
+  fill(0, 0, 0)
+vertex(471.5, 209.609375);
+vertex(487.5, 203.609375);
+vertex(508.5, 200.609375);
+vertex(521.5, 206.609375);
+vertex(540.5, 218.609375);
+vertex(537.5, 225.609375);
+vertex(527.5, 219.609375);
+vertex(518.5, 213.609375);
+vertex(509.5, 209.609375);
+vertex(495.5, 207.609375);
+vertex(484.5, 211.609375);
+vertex(476.5, 213.609375);
+vertex(471.5, 209.609375);
+endShape();
+  
+beginShape();//cella dreta
+  fill(0, 0, 0)
+vertex(394.44791412353516, 216.22916793823242);
+vertex(395.44791412353516, 225.22916793823242);
+vertex(384.44791412353516, 227.22916793823242);
+vertex(372.44791412353516, 230.22916793823242);
+vertex(360.44791412353516, 235.22916793823242);
+vertex(346.44791412353516, 243.22916793823242);
+vertex(354.44791412353516, 229.22916793823242);
+vertex(368.44791412353516, 221.22916793823242);
+vertex(380.44791412353516, 218.22916793823242);
+vertex(390.44791412353516, 216.22916793823242);
+endShape();
+
+beginShape();//cama dreta
+  fill(87, 134, 43)
+curveVertex(397.5, 652.609375);
+curveVertex(395.5, 665.609375);
+curveVertex(395.5, 677.609375);
+curveVertex(394.5, 693.609375);
+curveVertex(393.5, 708.609375);
+curveVertex(394.5, 727.609375);
+curveVertex(387.5, 727.609375);
+curveVertex(382.5, 732.609375);
+curveVertex(381.5, 738.609375);
+curveVertex(381.5, 753.609375);
+curveVertex(378.5, 770.609375);
+curveVertex(385.5, 773.609375);
+curveVertex(393.5, 778.609375);
+curveVertex(398.5, 780.609375);
+curveVertex(388.5, 777.609375);
+curveVertex(377.5, 774.609375);
+curveVertex(367.5, 774.609375);
+curveVertex(359.5, 781.609375);
+curveVertex(351.5, 789.609375);
+curveVertex(351.5, 799.609375);
+curveVertex(352.5, 808.609375);
+curveVertex(359.5, 815.609375);
+curveVertex(366.5, 820.609375);
+curveVertex(377.5, 827.609375);
+curveVertex(391.5, 828.609375);
+curveVertex(402.5, 828.609375);
+curveVertex(416.5, 828.609375);
+curveVertex(430.5, 825.609375);
+curveVertex(444.5, 820.609375);
+curveVertex(453.5, 811.609375);
+curveVertex(453.5, 793.609375);
+curveVertex(450.5, 781.609375);
+curveVertex(447.5, 765.609375);
+curveVertex(438.5, 752.609375);
+curveVertex(440.5, 742.609375);
+curveVertex(440.5, 731.609375);
+curveVertex(433.5, 725.609375);
+curveVertex(430.5, 716.609375);
+curveVertex(429.5, 706.609375);
+curveVertex(429.5, 696.609375);
+curveVertex(431.5, 681.609375);
+curveVertex(431.5, 669.609375);
+curveVertex(430.5, 657.609375);
+endShape();
+  
+beginShape();//cama esquerre
+  fill(87, 134, 43)
+curveVertex(496.5, 663.609375);
+curveVertex(498.5, 678.609375);
+curveVertex(498.5, 695.609375);
+curveVertex(499.5, 709.609375);
+curveVertex(498.5, 724.609375);
+curveVertex(493.5, 729.609375);
+curveVertex(489.5, 732.609375);
+curveVertex(487.5, 742.609375);
+curveVertex(492.5, 749.609375);
+curveVertex(485.5, 758.609375);
+curveVertex(482.5, 769.609375);
+curveVertex(480.5, 780.609375);
+curveVertex(479.5, 794.609375);
+curveVertex(479.5, 810.609375);
+curveVertex(497.5, 821.609375);
+curveVertex(521.5, 828.609375);
+curveVertex(541.5, 828.609375);
+curveVertex(555.5, 828.609375);
+curveVertex(569.5, 823.609375);
+curveVertex(577.5, 815.609375);
+curveVertex(580.5, 802.609375);
+curveVertex(578.5, 787.609375);
+curveVertex(568.5, 777.609375);
+curveVertex(550.5, 773.609375);
+curveVertex(533.5, 776.609375);
+curveVertex(551.5, 771.609375);
+curveVertex(549.5, 764.609375);
+curveVertex(545.5, 750.609375);
+curveVertex(550.5, 741.609375);
+curveVertex(546.5, 731.609375);
+curveVertex(536.5, 724.609375);
+curveVertex(536.5, 709.609375);
+curveVertex(535.5, 691.609375);
+curveVertex(535.5, 678.609375);
+curveVertex(533.5, 660.609375);
+endShape();
+  
+beginShape();//detall de la bamba
+curveVertex(340.5, 809.609375);
+curveVertex(360.5, 814.609375);
+curveVertex(375.5, 815.609375);
+curveVertex(391.5, 817.609375);
+curveVertex(407.5, 817.609375);
+curveVertex(423.5, 815.609375);
+curveVertex(438.5, 808.609375);
+curveVertex(448.5, 806.609375);
+curveVertex(458.5, 800.609375);
+curveVertex(465.5, 794.609375);
+endShape();
+  
+beginShape();//detall de la bamba
+curveVertex(470.5, 797.609375);
+curveVertex(485.5, 806.609375);
+curveVertex(497.5, 813.609375);
+curveVertex(512.5, 817.609375);
+curveVertex(528.5, 817.609375);
+curveVertex(538.5, 817.609375);
+curveVertex(554.5, 815.609375);
+curveVertex(566.5, 814.609375);
+curveVertex(577.5, 814.609375);
+curveVertex(587.5, 811.609375);
+endShape();
+  
+beginShape();//detall de la bamba
+    fill(254, 253, 219)
+curveVertex(470.5, 797.609375);
+curveVertex(485.5, 806.609375);
+curveVertex(497.5, 813.609375);
+curveVertex(512.5, 817.609375);
+curveVertex(528.5, 817.609375);
+curveVertex(538.5, 817.609375);
+curveVertex(554.5, 815.609375);
+curveVertex(566.5, 814.609375);
+curveVertex(577.5, 814.609375);
+curveVertex(587.5, 811.609375);
+curveVertex(576.5, 814.609375);
+curveVertex(565.5, 814.609375);
+curveVertex(555.5, 814.609375);
+curveVertex(539.5, 817.609375);
+curveVertex(527.5, 817.609375);
+curveVertex(512.5, 816.609375);
+curveVertex(495.5, 812.609375);
+curveVertex(485.5, 806.609375);
+curveVertex(474.5, 797.609375);
+curveVertex(461.5, 790.609375);
+endShape();
+  
+beginShape();//pupila de l'ull dret
+  fill(0, 0, 0)
+curveVertex(363.5, 267.609375);
+curveVertex(349.5, 275.609375);
+curveVertex(339.5, 286.609375);
+curveVertex(336.5, 300.609375);
+curveVertex(338.5, 315.609375);
+curveVertex(344.5, 328.609375);
+curveVertex(356.5, 338.609375);
+curveVertex(366.5, 343.609375);
+curveVertex(379.5, 343.609375);
+curveVertex(394.5, 341.609375);
+curveVertex(403.5, 335.609375);
+curveVertex(410.5, 327.609375);
+curveVertex(414.5, 316.609375);
+curveVertex(415.5, 304.609375);
+curveVertex(415.5, 294.609375);
+curveVertex(412.5, 284.609375);
+curveVertex(405.5, 274.609375);
+curveVertex(395.5, 267.609375);
+curveVertex(384.5, 265.609375);
+curveVertex(371.5, 264.609375);
+curveVertex(364.5, 267.609375);
+endShape(CLOSE);
+  
+beginShape();//pupila d'ull esquerre
+  fill(0, 0, 0)
+curveVertex(486.5, 270.609375);
+curveVertex(497.5, 266.609375);
+curveVertex(512.5, 265.609375);
+curveVertex(526.5, 267.609375);
+curveVertex(538.5, 273.609375);
+curveVertex(545.5, 285.609375);
+curveVertex(548.5, 301.609375);
+curveVertex(549.5, 318.609375);
+curveVertex(541.5, 332.609375);
+curveVertex(533.5, 341.609375);
+curveVertex(519.5, 346.609375);
+curveVertex(507.5, 346.609375);
+curveVertex(495.5, 345.609375);
+curveVertex(482.5, 338.609375);
+curveVertex(476.5, 329.609375);
+curveVertex(470.5, 320.609375);
+curveVertex(468.5, 307.609375);
+curveVertex(472.5, 290.609375);
+curveVertex(477.5, 278.609375);
+curveVertex(489.5, 269.609375);
+endShape(CLOSE);
+}
+
+
+    function figuraEspantat(intensity) {
+function setup() {
+  createCanvas(1000, 1000);
+}
+
+function draw() {
+  background(220);
+  sinus=sin(frameCount*0.02)*20;
+
+
+beginShape();//contorn general
+ fill (87, 134, 43)
+curveVertex(406.5, 146.609375);
+curveVertex(426.5, 137.609375);
+curveVertex(443.5, 132.609375);
+curveVertex(462.5, 131.609375);
+curveVertex(490.5, 130.609375);
+curveVertex(521.5, 134.609375);
+curveVertex(558.5, 149.609375);
+curveVertex(574.5, 162.609375);
+curveVertex(598.5, 188.609375);
+curveVertex(607.5, 212.609375);
+curveVertex(615.5, 237.609375);
+curveVertex(621.5, 263.609375);
+curveVertex(624.5, 283.609375);
+curveVertex(631.5, 302.609375);
+curveVertex(635.5, 322.609375);
+curveVertex(644.5, 336.609375);
+curveVertex(652.5, 353.609375);
+curveVertex(662.5, 367.609375);
+curveVertex(674.5, 384.609375);
+curveVertex(687.5, 398.609375);
+curveVertex(702.5, 426.609375);
+curveVertex(711.5, 448.609375);
+curveVertex(718.5, 472.609375);
+curveVertex(719.5, 492.609375);
+curveVertex(719.5, 514.609375);
+curveVertex(718.5, 539.609375);
+curveVertex(717.5, 555.609375);
+curveVertex(709.5, 570.609375);
+curveVertex(703.5, 592.609375);
+curveVertex(691.5, 609.609375);
+curveVertex(672.5, 629.609375);
+curveVertex(654.5, 644.609375);
+curveVertex(634.5, 653.609375);
+curveVertex(599.5, 665.609375);
+curveVertex(570.5, 672.609375);
+curveVertex(540.5, 679.609375);
+curveVertex(500.5, 680.609375);
+curveVertex(477.5, 681.609375);
+curveVertex(435.5, 682.609375);
+curveVertex(402.5, 677.609375);
+curveVertex(367.5, 669.609375);
+curveVertex(340.5, 656.609375);
+curveVertex(321.5, 644.609375);
+curveVertex(303.5, 629.609375);
+curveVertex(284.5, 605.609375);
+curveVertex(272.5, 581.609375);
+curveVertex(264.5, 556.609375);
+curveVertex(260.5, 532.609375);
+curveVertex(261.5, 505.609375);
+curveVertex(264.5, 481.609375);
+curveVertex(271.5, 455.609375);
+curveVertex(278.5, 437.609375);
+curveVertex(266.5, 449.609375);
+curveVertex(257.5, 463.609375);
+curveVertex(243.5, 483.609375);
+curveVertex(229.5, 506.609375);
+curveVertex(219.5, 528.609375);
+curveVertex(215.5, 546.609375);
+curveVertex(215.5, 570.609375);
+curveVertex(226.5, 585.609375);
+curveVertex(240.5, 592.609375);
+curveVertex(252.5, 580.609375);
+curveVertex(261.5, 564.609375);
+curveVertex(264.5, 558.609375);
+curveVertex(262.5, 533.609375);
+curveVertex(258.5, 504.609375);
+curveVertex(264.5, 478.609375);
+curveVertex(272.5, 452.609375);
+curveVertex(278.5, 434.609375);
+curveVertex(285.5, 420.609375);
+curveVertex(294.5, 408.609375);
+curveVertex(305.5, 398.609375);
+curveVertex(314.5, 383.609375);
+curveVertex(323.5, 366.609375);
+curveVertex(330.5, 349.609375);
+curveVertex(338.5, 320.609375);
+curveVertex(341.5, 303.609375);
+curveVertex(344.5, 284.609375);
+curveVertex(350.5, 259.609375);
+curveVertex(350.5, 250.609375);
+curveVertex(352.5, 229.609375);
+curveVertex(356.5, 209.609375);
+curveVertex(365.5, 188.609375);
+curveVertex(377.5, 169.609375);
+curveVertex(395.5, 154.609375);
+curveVertex(408.5, 144.609375);
+endShape(CLOSE);
+
+beginShape();//contorn interior
+fill(222, 222, 124)
+vertex(448.5, 132.609375);
+vertex(460.5, 132.609375);
+vertex(473.5, 135.609375);
+vertex(492.5, 141.609375);
+vertex(511.5, 149.609375);
+vertex(532.5, 163.609375);
+vertex(542.5, 174.609375);
+vertex(554.5, 194.609375);
+vertex(563.5, 220.609375);
+vertex(564.5, 241.609375);
+vertex(564.5, 258.609375);
+vertex(568.5, 281.609375);
+vertex(572.5, 305.609375);
+vertex(577.5, 332.609375);
+vertex(584.5, 353.609375);
+vertex(595.5, 373.609375);
+vertex(611.5, 400.609375);
+vertex(624.5, 416.609375);
+vertex(636.5, 439.609375);
+vertex(645.5, 461.609375);
+vertex(651.5, 486.609375);
+vertex(653.5, 505.609375);
+vertex(654.5, 529.609375);
+vertex(653.5, 546.609375);
+vertex(649.5, 564.609375);
+vertex(642.5, 583.609375);
+vertex(633.5, 600.609375);
+vertex(622.5, 614.609375);
+vertex(611.5, 628.609375);
+vertex(595.5, 643.609375);
+vertex(576.5, 658.609375);
+vertex(551.5, 667.609375);
+vertex(533.5, 673.609375);
+vertex(485.5, 677.609375);
+vertex(455.5, 677.609375);
+vertex(418.5, 676.609375);
+vertex(375.5, 666.609375);
+vertex(350.5, 658.609375);
+vertex(330.5, 646.609375);
+vertex(304.5, 627.609375);
+vertex(296.5, 613.609375);
+vertex(286.5, 597.609375);
+vertex(278.5, 584.609375);
+vertex(272.5, 565.609375);
+vertex(267.5, 554.609375);
+vertex(266.5, 535.609375);
+vertex(265.5, 515.609375);
+vertex(265.5, 490.609375);
+vertex(269.5, 469.609375);
+vertex(275.5, 449.609375);
+vertex(286.5, 424.609375);
+vertex(300.5, 401.609375);
+vertex(314.5, 380.609375);
+vertex(325.5, 360.609375);
+vertex(331.5, 347.609375);
+vertex(350.5, 249.609375);
+vertex(350.5, 228.609375);
+vertex(355.5, 209.609375);
+vertex(366.5, 185.609375);
+vertex(384.5, 162.609375);
+vertex(409.5, 145.609375);
+vertex(429.5, 135.609375);
+vertex(449.5, 131.609375);
+endShape();
+
+beginShape();//braç esquerre
+  fill(98, 150, 55)
+vertex(667.4479141235352, 443.6736145019531);
+vertex(641.4479141235352, 428.6736145019531);
+vertex(624.4479141235352, 418.6736145019531);
+vertex(605.4479141235352, 407.6736145019531);
+vertex(590.4479141235352, 395.6736145019531);
+vertex(577.4479141235352, 385.6736145019531);
+vertex(561.4479141235352, 377.6736145019531);
+vertex(544.4479141235352, 378.6736145019531);
+vertex(532.4479141235352, 390.6736145019531);
+vertex(530.4479141235352, 405.6736145019531);
+vertex(543.4479141235352, 423.6736145019531);
+vertex(560.4479141235352, 441.6736145019531);
+vertex(583.4479141235352, 458.6736145019531);
+vertex(612.4479141235352, 472.6736145019531);
+vertex(639.4479141235352, 485.6736145019531);
+vertex(674.4479141235352, 492.6736145019531);
+vertex(689.4479141235352, 483.6736145019531);
+vertex(688.4479141235352, 459.6736145019531);
+vertex(674.4479141235352, 447.6736145019531);
+vertex(668.4479141235352, 443.6736145019531);
+endShape();
+  
+beginShape();//os
+  fill(173, 118, 62)
+curveVertex(443.5, 410.609375);
+curveVertex(423.5, 412.609375);
+curveVertex(403.5, 422.609375);
+curveVertex(387.5, 436.609375);
+curveVertex(371.5, 454.609375);
+curveVertex(363.5, 470.609375);
+curveVertex(356.5, 489.609375);
+curveVertex(354.5, 509.609375);
+curveVertex(356.5, 531.609375);
+curveVertex(362.5, 552.609375);
+curveVertex(373.5, 568.609375);
+curveVertex(385.5, 586.609375);
+curveVertex(396.5, 596.609375);
+curveVertex(414.5, 608.609375);
+curveVertex(433.5, 615.609375);
+curveVertex(449.5, 617.609375);
+curveVertex(471.5, 617.609375);
+curveVertex(488.5, 613.609375);
+curveVertex(508.5, 603.609375);
+curveVertex(525.5, 586.609375);
+curveVertex(541.5, 571.609375);
+curveVertex(550.5, 550.609375);
+curveVertex(556.5, 532.609375);
+curveVertex(556.5, 516.609375);
+curveVertex(554.5, 498.609375);
+curveVertex(549.5, 480.609375);
+curveVertex(543.5, 463.609375);
+curveVertex(531.5, 444.609375);
+curveVertex(516.5, 429.609375);
+curveVertex(498.5, 417.609375);
+curveVertex(477.5, 409.609375);
+curveVertex(457.5, 409.609375);
+curveVertex(442.5, 410.609375);
+endShape(CLOSE);
+
+beginShape();//ull dret
+  fill(255, 252, 243)
+curveVertex(372.44791412353516, 233.45138931274414);
+curveVertex(360.44791412353516, 235.45138931274414);
+curveVertex(354.44791412353516, 247.45138931274414);
+curveVertex(348.44791412353516, 267.45138931274414);
+curveVertex(347.44791412353516, 292.45138931274414);
+curveVertex(347.44791412353516, 319.45138931274414);
+curveVertex(346.44791412353516, 343.45138931274414);
+curveVertex(353.44791412353516, 362.45138931274414);
+curveVertex(372.44791412353516, 373.45138931274414);
+curveVertex(392.44791412353516, 367.45138931274414);
+curveVertex(403.44791412353516, 354.45138931274414);
+curveVertex(405.44791412353516, 329.45138931274414);
+curveVertex(405.44791412353516, 309.45138931274414);
+curveVertex(402.44791412353516, 291.45138931274414);
+curveVertex(402.44791412353516, 267.45138931274414);
+curveVertex(402.44791412353516, 245.45138931274414);
+curveVertex(394.44791412353516, 232.45138931274414);
+curveVertex(380.44791412353516, 229.45138931274414);
+curveVertex(367.44791412353516, 232.45138931274414);
+endShape(CLOSE);
+
+beginShape();//ull esquerre
+  fill(255, 252, 243)
+curveVertex(515.4479141235352, 237.00694453716278);
+curveVertex(499.44791412353516, 240.67361450195312);
+curveVertex(491.44791412353516, 245.67361450195312);
+curveVertex(487.44791412353516, 259.6736145019531);
+curveVertex(486.44791412353516, 280.6736145019531);
+curveVertex(486.44791412353516, 302.6736145019531);
+curveVertex(488.44791412353516, 328.6736145019531);
+curveVertex(489.44791412353516, 350.6736145019531);
+curveVertex(497.44791412353516, 361.6736145019531);
+curveVertex(514.4479141235352, 366.6736145019531);
+curveVertex(530.4479141235352, 365.6736145019531);
+curveVertex(539.4479141235352, 357.6736145019531);
+curveVertex(544.4479141235352, 341.6736145019531);
+curveVertex(543.4479141235352, 321.6736145019531);
+curveVertex(541.4479141235352, 299.6736145019531);
+curveVertex(541.4479141235352, 280.6736145019531);
+curveVertex(541.4479141235352, 256.6736145019531);
+curveVertex(539.4479141235352, 243.67361450195312);
+curveVertex(527.4479141235352, 237.67361450195312);
+curveVertex(514.4479141235352, 235.67361450195312);
+endShape(CLOSE);
+
+beginShape();//boca
+  fill(0, 0, 0)
+curveVertex(440.44791412353516, 350.78472232818604);
+curveVertex(425.44791412353516, 352.78472232818604);
+curveVertex(413.44791412353516, 363.78472232818604);
+curveVertex(409.44791412353516, 386.78472232818604);
+curveVertex(417.44791412353516, 408.78472232818604);
+curveVertex(437.44791412353516, 413.78472232818604);
+curveVertex(461.44791412353516, 412.78472232818604);
+curveVertex(470.44791412353516, 396.78472232818604);
+curveVertex(472.44791412353516, 376.78472232818604);
+curveVertex(467.44791412353516, 362.78472232818604);
+curveVertex(459.44791412353516, 353.78472232818604);
+curveVertex(447.44791412353516, 349.78472232818604);
+curveVertex(442.44791412353516, 349.78472232818604);
+endShape();
+
+beginShape();//cella esquerre
+  fill(0, 0, 0)
+vertex(471.5, 209.609375);
+vertex(487.5, 203.609375);
+vertex(508.5, 200.609375);
+vertex(521.5, 206.609375);
+vertex(540.5, 218.609375);
+vertex(537.5, 225.609375);
+vertex(527.5, 219.609375);
+vertex(518.5, 213.609375);
+vertex(509.5, 209.609375);
+vertex(495.5, 207.609375);
+vertex(484.5, 211.609375);
+vertex(476.5, 213.609375);
+vertex(471.5, 209.609375);
+endShape();
+
+  
+beginShape();//cella dreta
+  fill(0, 0, 0)
+vertex(331.5, 240.609375);
+vertex(339.5, 231.609375);
+vertex(354.5, 217.609375);
+vertex(364.5, 205.609375);
+vertex(375.5, 192.609375);
+vertex(381.5, 194.609375);
+vertex(373.5, 203.609375);
+vertex(367.5, 211.609375);
+vertex(359.5, 220.609375);
+vertex(348.5, 232.609375);
+vertex(337.5, 242.609375);
+vertex(330.5, 241.609375);
+endShape();
+  
+beginShape();//cama dreta
+  fill(87, 134, 43)
+curveVertex(397.5, 652.609375);
+curveVertex(395.5, 665.609375);
+curveVertex(395.5, 677.609375);
+curveVertex(394.5, 693.609375);
+curveVertex(393.5, 708.609375);
+curveVertex(394.5, 727.609375);
+curveVertex(387.5, 727.609375);
+curveVertex(382.5, 732.609375);
+curveVertex(381.5, 738.609375);
+curveVertex(381.5, 753.609375);
+curveVertex(378.5, 770.609375);
+curveVertex(385.5, 773.609375);
+curveVertex(393.5, 778.609375);
+curveVertex(398.5, 780.609375);
+curveVertex(388.5, 777.609375);
+curveVertex(377.5, 774.609375);
+curveVertex(367.5, 774.609375);
+curveVertex(359.5, 781.609375);
+curveVertex(351.5, 789.609375);
+curveVertex(351.5, 799.609375);
+curveVertex(352.5, 808.609375);
+curveVertex(359.5, 815.609375);
+curveVertex(366.5, 820.609375);
+curveVertex(377.5, 827.609375);
+curveVertex(391.5, 828.609375);
+curveVertex(402.5, 828.609375);
+curveVertex(416.5, 828.609375);
+curveVertex(430.5, 825.609375);
+curveVertex(444.5, 820.609375);
+curveVertex(453.5, 811.609375);
+curveVertex(453.5, 793.609375);
+curveVertex(450.5, 781.609375);
+curveVertex(447.5, 765.609375);
+curveVertex(438.5, 752.609375);
+curveVertex(440.5, 742.609375);
+curveVertex(440.5, 731.609375);
+curveVertex(433.5, 725.609375);
+curveVertex(430.5, 716.609375);
+curveVertex(429.5, 706.609375);
+curveVertex(429.5, 696.609375);
+curveVertex(431.5, 681.609375);
+curveVertex(431.5, 669.609375);
+curveVertex(430.5, 657.609375);
+endShape();
+  
+beginShape();//cama esquerre
+  fill(87, 134, 43)
+curveVertex(496.5, 663.609375);
+curveVertex(498.5, 678.609375);
+curveVertex(498.5, 695.609375);
+curveVertex(499.5, 709.609375);
+curveVertex(498.5, 724.609375);
+curveVertex(493.5, 729.609375);
+curveVertex(489.5, 732.609375);
+curveVertex(487.5, 742.609375);
+curveVertex(492.5, 749.609375);
+curveVertex(485.5, 758.609375);
+curveVertex(482.5, 769.609375);
+curveVertex(480.5, 780.609375);
+curveVertex(479.5, 794.609375);
+curveVertex(479.5, 810.609375);
+curveVertex(497.5, 821.609375);
+curveVertex(521.5, 828.609375);
+curveVertex(541.5, 828.609375);
+curveVertex(555.5, 828.609375);
+curveVertex(569.5, 823.609375);
+curveVertex(577.5, 815.609375);
+curveVertex(580.5, 802.609375);
+curveVertex(578.5, 787.609375);
+curveVertex(568.5, 777.609375);
+curveVertex(550.5, 773.609375);
+curveVertex(533.5, 776.609375);
+curveVertex(551.5, 771.609375);
+curveVertex(549.5, 764.609375);
+curveVertex(545.5, 750.609375);
+curveVertex(550.5, 741.609375);
+curveVertex(546.5, 731.609375);
+curveVertex(536.5, 724.609375);
+curveVertex(536.5, 709.609375);
+curveVertex(535.5, 691.609375);
+curveVertex(535.5, 678.609375);
+curveVertex(533.5, 660.609375);
+endShape();
+  
+beginShape();//detall de la bamba
+curveVertex(340.5, 809.609375);
+curveVertex(360.5, 814.609375);
+curveVertex(375.5, 815.609375);
+curveVertex(391.5, 817.609375);
+curveVertex(407.5, 817.609375);
+curveVertex(423.5, 815.609375);
+curveVertex(438.5, 808.609375);
+curveVertex(448.5, 806.609375);
+curveVertex(458.5, 800.609375);
+curveVertex(465.5, 794.609375);
+endShape();
+  
+beginShape();//detall de la bamba
+curveVertex(470.5, 797.609375);
+curveVertex(485.5, 806.609375);
+curveVertex(497.5, 813.609375);
+curveVertex(512.5, 817.609375);
+curveVertex(528.5, 817.609375);
+curveVertex(538.5, 817.609375);
+curveVertex(554.5, 815.609375);
+curveVertex(566.5, 814.609375);
+curveVertex(577.5, 814.609375);
+curveVertex(587.5, 811.609375);
+endShape();
+  
+beginShape();//detall de la bamba
+    fill(254, 253, 219)
+curveVertex(470.5, 797.609375);
+curveVertex(485.5, 806.609375);
+curveVertex(497.5, 813.609375);
+curveVertex(512.5, 817.609375);
+curveVertex(528.5, 817.609375);
+curveVertex(538.5, 817.609375);
+curveVertex(554.5, 815.609375);
+curveVertex(566.5, 814.609375);
+curveVertex(577.5, 814.609375);
+curveVertex(587.5, 811.609375);
+curveVertex(576.5, 814.609375);
+curveVertex(565.5, 814.609375);
+curveVertex(555.5, 814.609375);
+curveVertex(539.5, 817.609375);
+curveVertex(527.5, 817.609375);
+curveVertex(512.5, 816.609375);
+curveVertex(495.5, 812.609375);
+curveVertex(485.5, 806.609375);
+curveVertex(474.5, 797.609375);
+curveVertex(461.5, 790.609375);
+endShape();
+  
+beginShape();//pupila de l'ull dret
+  fill(0, 0, 0)
+curveVertex(369.44791412353516, 249.67361450195312);
+curveVertex(359.44791412353516, 253.67361450195312);
+curveVertex(355.44791412353516, 261.6736145019531);
+curveVertex(353.44791412353516, 274.6736145019531);
+curveVertex(353.44791412353516, 289.6736145019531);
+curveVertex(352.44791412353516, 307.6736145019531);
+curveVertex(351.44791412353516, 324.6736145019531);
+curveVertex(351.44791412353516, 337.6736145019531);
+curveVertex(353.44791412353516, 346.6736145019531);
+curveVertex(367.44791412353516, 351.6736145019531);
+curveVertex(380.44791412353516, 349.6736145019531);
+curveVertex(383.44791412353516, 337.6736145019531);
+curveVertex(383.44791412353516, 321.6736145019531);
+curveVertex(382.44791412353516, 304.6736145019531);
+curveVertex(381.44791412353516, 286.6736145019531);
+curveVertex(381.44791412353516, 267.6736145019531);
+curveVertex(381.44791412353516, 254.67361450195312);
+curveVertex(373.44791412353516, 248.67361450195312);
+curveVertex(367.44791412353516, 249.67361450195312);
+endShape();
+  
+beginShape();//pupila d'ull esquerre
+  fill(0, 0, 0)
+curveVertex(516.4479141235352, 252.22916412353516);
+curveVertex(501.44791412353516, 255.22916412353516);
+curveVertex(494.44791412353516, 266.22916412353516);
+curveVertex(490.44791412353516, 282.22916412353516);
+curveVertex(490.44791412353516, 301.22916412353516);
+curveVertex(490.44791412353516, 317.22916412353516);
+curveVertex(492.44791412353516, 334.22916412353516);
+curveVertex(499.44791412353516, 345.22916412353516);
+curveVertex(516.4479141235352, 347.22916412353516);
+curveVertex(526.4479141235352, 341.22916412353516);
+curveVertex(526.4479141235352, 323.22916412353516);
+curveVertex(525.4479141235352, 305.22916412353516);
+curveVertex(527.4479141235352, 293.22916412353516);
+curveVertex(525.4479141235352, 273.22916412353516);
+curveVertex(525.4479141235352, 256.22916412353516);
+curveVertex(515.4479141235352, 253.22916412353516);
+curveVertex(501.44791412353516, 254.22916412353516);
+endShape();
+  
+beginShape();//brill gran de l'ull dret
+  fill(252, 255, 254)
+curveVertex(371.44791412353516, 280.4513931274414);
+curveVertex(362.44791412353516, 281.1180725097656);
+curveVertex(358.44791412353516, 287.1180725097656);
+curveVertex(358.44791412353516, 297.1180725097656);
+curveVertex(357.44791412353516, 311.1180725097656);
+curveVertex(358.44791412353516, 326.1180725097656);
+curveVertex(362.44791412353516, 335.1180725097656);
+curveVertex(370.44791412353516, 337.1180725097656);
+curveVertex(375.44791412353516, 332.1180725097656);
+curveVertex(375.44791412353516, 320.1180725097656);
+curveVertex(377.44791412353516, 309.1180725097656);
+curveVertex(377.44791412353516, 298.1180725097656);
+curveVertex(377.44791412353516, 289.1180725097656);
+curveVertex(376.44791412353516, 281.2291717529297);
+curveVertex(371.44791412353516, 280.2291717529297);
+curveVertex(365.44791412353516, 280.2291717529297);
+curveVertex(360.44791412353516, 280.2291717529297);
+curveVertex(357.44791412353516, 284.2291717529297);
+endShape();
+  
+beginShape();//brill gran de l'ull esquerre
+  fill(252, 255, 254)
+curveVertex(512.4479141235352, 268.2291717529297);
+curveVertex(502.44791412353516, 267.78472900390625);
+curveVertex(495.44791412353516, 272.78472900390625);
+curveVertex(493.44791412353516, 279.78472900390625);
+curveVertex(493.44791412353516, 288.78472900390625);
+curveVertex(493.44791412353516, 298.78472900390625);
+curveVertex(494.44791412353516, 309.78472900390625);
+curveVertex(495.44791412353516, 320.78472900390625);
+curveVertex(495.44791412353516, 330.78472900390625);
+curveVertex(496.44791412353516, 339.78472900390625);
+curveVertex(502.44791412353516, 344.78472900390625);
+curveVertex(511.44791412353516, 344.78472900390625);
+curveVertex(517.4479141235352, 336.78472900390625);
+curveVertex(516.4479141235352, 324.78472900390625);
+curveVertex(516.4479141235352, 311.78472900390625);
+curveVertex(516.4479141235352, 296.78472900390625);
+curveVertex(515.4479141235352, 283.78472900390625);
+curveVertex(514.4479141235352, 274.78472900390625);
+curveVertex(511.44791412353516, 268.78472900390625);
+endShape();
+}
+
+    function figuraNeutral(intensity) {
+ function setup() {
+  createCanvas(1000, 1000);
+}
+
+function draw() {
+  background(220);
+  sinus=sin(frameCount*0.02)*20;
+
+
+beginShape();//contorn general
+ fill (87, 134, 43)
+curveVertex(406.5, 146.609375);
+curveVertex(426.5, 137.609375);
+curveVertex(443.5, 132.609375);
+curveVertex(462.5, 131.609375);
+curveVertex(490.5, 130.609375);
+curveVertex(521.5, 134.609375);
+curveVertex(558.5, 149.609375);
+curveVertex(574.5, 162.609375);
+curveVertex(598.5, 188.609375);
+curveVertex(607.5, 212.609375);
+curveVertex(615.5, 237.609375);
+curveVertex(621.5, 263.609375);
+curveVertex(624.5, 283.609375);
+curveVertex(631.5, 302.609375);
+curveVertex(635.5, 322.609375);
+curveVertex(644.5, 336.609375);
+curveVertex(652.5, 353.609375);
+curveVertex(662.5, 367.609375);
+curveVertex(674.5, 384.609375);
+curveVertex(687.5, 398.609375);
+curveVertex(702.5, 426.609375);
+curveVertex(711.5, 448.609375);
+curveVertex(718.5, 472.609375);
+curveVertex(719.5, 492.609375);
+curveVertex(719.5, 514.609375);
+curveVertex(718.5, 539.609375);
+curveVertex(717.5, 555.609375);
+curveVertex(709.5, 570.609375);
+curveVertex(703.5, 592.609375);
+curveVertex(691.5, 609.609375);
+curveVertex(672.5, 629.609375);
+curveVertex(654.5, 644.609375);
+curveVertex(634.5, 653.609375);
+curveVertex(599.5, 665.609375);
+curveVertex(570.5, 672.609375);
+curveVertex(540.5, 679.609375);
+curveVertex(500.5, 680.609375);
+curveVertex(477.5, 681.609375);
+curveVertex(435.5, 682.609375);
+curveVertex(402.5, 677.609375);
+curveVertex(367.5, 669.609375);
+curveVertex(340.5, 656.609375);
+curveVertex(321.5, 644.609375);
+curveVertex(303.5, 629.609375);
+curveVertex(284.5, 605.609375);
+curveVertex(272.5, 581.609375);
+curveVertex(264.5, 556.609375);
+curveVertex(260.5, 532.609375);
+curveVertex(261.5, 505.609375);
+curveVertex(264.5, 481.609375);
+curveVertex(271.5, 455.609375);
+curveVertex(278.5, 437.609375);
+curveVertex(266.5, 449.609375);
+curveVertex(257.5, 463.609375);
+curveVertex(243.5, 483.609375);
+curveVertex(229.5, 506.609375);
+curveVertex(219.5, 528.609375);
+curveVertex(215.5, 546.609375);
+curveVertex(215.5, 570.609375);
+curveVertex(226.5, 585.609375);
+curveVertex(240.5, 592.609375);
+curveVertex(252.5, 580.609375);
+curveVertex(261.5, 564.609375);
+curveVertex(264.5, 558.609375);
+curveVertex(262.5, 533.609375);
+curveVertex(258.5, 504.609375);
+curveVertex(264.5, 478.609375);
+curveVertex(272.5, 452.609375);
+curveVertex(278.5, 434.609375);
+curveVertex(285.5, 420.609375);
+curveVertex(294.5, 408.609375);
+curveVertex(305.5, 398.609375);
+curveVertex(314.5, 383.609375);
+curveVertex(323.5, 366.609375);
+curveVertex(330.5, 349.609375);
+curveVertex(338.5, 320.609375);
+curveVertex(341.5, 303.609375);
+curveVertex(344.5, 284.609375);
+curveVertex(350.5, 259.609375);
+curveVertex(350.5, 250.609375);
+curveVertex(352.5, 229.609375);
+curveVertex(356.5, 209.609375);
+curveVertex(365.5, 188.609375);
+curveVertex(377.5, 169.609375);
+curveVertex(395.5, 154.609375);
+curveVertex(408.5, 144.609375);
+endShape(CLOSE);
+
+beginShape();//contorn interior
+fill(222, 222, 124)
+vertex(448.5, 132.609375);
+vertex(460.5, 132.609375);
+vertex(473.5, 135.609375);
+vertex(492.5, 141.609375);
+vertex(511.5, 149.609375);
+vertex(532.5, 163.609375);
+vertex(542.5, 174.609375);
+vertex(554.5, 194.609375);
+vertex(563.5, 220.609375);
+vertex(564.5, 241.609375);
+vertex(564.5, 258.609375);
+vertex(568.5, 281.609375);
+vertex(572.5, 305.609375);
+vertex(577.5, 332.609375);
+vertex(584.5, 353.609375);
+vertex(595.5, 373.609375);
+vertex(611.5, 400.609375);
+vertex(624.5, 416.609375);
+vertex(636.5, 439.609375);
+vertex(645.5, 461.609375);
+vertex(651.5, 486.609375);
+vertex(653.5, 505.609375);
+vertex(654.5, 529.609375);
+vertex(653.5, 546.609375);
+vertex(649.5, 564.609375);
+vertex(642.5, 583.609375);
+vertex(633.5, 600.609375);
+vertex(622.5, 614.609375);
+vertex(611.5, 628.609375);
+vertex(595.5, 643.609375);
+vertex(576.5, 658.609375);
+vertex(551.5, 667.609375);
+vertex(533.5, 673.609375);
+vertex(485.5, 677.609375);
+vertex(455.5, 677.609375);
+vertex(418.5, 676.609375);
+vertex(375.5, 666.609375);
+vertex(350.5, 658.609375);
+vertex(330.5, 646.609375);
+vertex(304.5, 627.609375);
+vertex(296.5, 613.609375);
+vertex(286.5, 597.609375);
+vertex(278.5, 584.609375);
+vertex(272.5, 565.609375);
+vertex(267.5, 554.609375);
+vertex(266.5, 535.609375);
+vertex(265.5, 515.609375);
+vertex(265.5, 490.609375);
+vertex(269.5, 469.609375);
+vertex(275.5, 449.609375);
+vertex(286.5, 424.609375);
+vertex(300.5, 401.609375);
+vertex(314.5, 380.609375);
+vertex(325.5, 360.609375);
+vertex(331.5, 347.609375);
+vertex(350.5, 249.609375);
+vertex(350.5, 228.609375);
+vertex(355.5, 209.609375);
+vertex(366.5, 185.609375);
+vertex(384.5, 162.609375);
+vertex(409.5, 145.609375);
+vertex(429.5, 135.609375);
+vertex(449.5, 131.609375);
+endShape();
+
+beginShape();//braç esquerre
+  fill(98, 150, 55)
+curveVertex(635.5, 385.609375);
+curveVertex(646.5, 386.609375);
+curveVertex(658.5, 400.609375);
+curveVertex(671.5, 418.609375);
+curveVertex(681.5, 432.609375);
+curveVertex(695.5, 454.609375);
+curveVertex(707.5, 473.609375);
+curveVertex(718.5, 492.609375);
+curveVertex(724.5, 511.609375);
+curveVertex(731.5, 536.609375);
+curveVertex(731.5, 562.609375);
+curveVertex(721.5, 573.609375);
+curveVertex(706.5, 571.609375);
+curveVertex(694.5, 557.609375);
+curveVertex(680.5, 532.609375);
+curveVertex(669.5, 505.609375);
+curveVertex(659.5, 476.609375);
+curveVertex(649.5, 451.609375);
+curveVertex(641.5, 422.609375);
+curveVertex(635.5, 398.609375);
+curveVertex(635.5, 382.609375);
+endShape(CLOSE);
+
+beginShape();//os
+  fill(173, 118, 62)
+curveVertex(443.5, 410.609375);
+curveVertex(423.5, 412.609375);
+curveVertex(403.5, 422.609375);
+curveVertex(387.5, 436.609375);
+curveVertex(371.5, 454.609375);
+curveVertex(363.5, 470.609375);
+curveVertex(356.5, 489.609375);
+curveVertex(354.5, 509.609375);
+curveVertex(356.5, 531.609375);
+curveVertex(362.5, 552.609375);
+curveVertex(373.5, 568.609375);
+curveVertex(385.5, 586.609375);
+curveVertex(396.5, 596.609375);
+curveVertex(414.5, 608.609375);
+curveVertex(433.5, 615.609375);
+curveVertex(449.5, 617.609375);
+curveVertex(471.5, 617.609375);
+curveVertex(488.5, 613.609375);
+curveVertex(508.5, 603.609375);
+curveVertex(525.5, 586.609375);
+curveVertex(541.5, 571.609375);
+curveVertex(550.5, 550.609375);
+curveVertex(556.5, 532.609375);
+curveVertex(556.5, 516.609375);
+curveVertex(554.5, 498.609375);
+curveVertex(549.5, 480.609375);
+curveVertex(543.5, 463.609375);
+curveVertex(531.5, 444.609375);
+curveVertex(516.5, 429.609375);
+curveVertex(498.5, 417.609375);
+curveVertex(477.5, 409.609375);
+curveVertex(457.5, 409.609375);
+curveVertex(442.5, 410.609375);
+endShape(CLOSE);
+
+beginShape();//ull dret
+  fill(255, 252, 243)
+curveVertex(348.5, 253.609375);//he tret 10 numeros a la segona columna de numeros.
+curveVertex(335.5, 260.609375);
+curveVertex(324.5, 271.609375);
+curveVertex(317.5, 284.609375);
+curveVertex(314.5, 299.609375);
+curveVertex(314.5, 317.609375);
+curveVertex(319.5, 327.609375);
+curveVertex(330.5, 341.609375);
+curveVertex(340.5, 350.609375);
+curveVertex(354.5, 360.609375);
+curveVertex(370.5, 362.609375);
+curveVertex(384.5, 360.609375);
+curveVertex(398.5, 353.609375);
+curveVertex(414.5, 341.609375);
+curveVertex(424.5, 324.609375);
+curveVertex(427.5, 311.609375);
+curveVertex(427.5, 293.609375);
+curveVertex(419.5, 275.609375);
+curveVertex(404.5, 258.609375);
+curveVertex(388.5, 250.609375);
+curveVertex(368.5, 249.609375);
+curveVertex(348.5, 249.609375);
+endShape(CLOSE);
+
+beginShape();//ull esquerre
+  fill(255, 252, 243)
+curveVertex(508.5, 249.609375);
+curveVertex(492.5, 254.609375);
+curveVertex(478.5, 263.609375);
+curveVertex(469.5, 274.609375);
+curveVertex(463.5, 287.609375);
+curveVertex(459.5, 300.609375);
+curveVertex(459.5, 312.609375);
+curveVertex(462.5, 324.609375);
+curveVertex(467.5, 335.609375);
+curveVertex(477.5, 346.609375);
+curveVertex(490.5, 355.609375);
+curveVertex(503.5, 361.609375);
+curveVertex(519.5, 363.609375);
+curveVertex(536.5, 360.609375);
+curveVertex(547.5, 352.609375);
+curveVertex(560.5, 342.609375);
+curveVertex(569.5, 324.609375);
+curveVertex(571.5, 308.609375);
+curveVertex(569.5, 290.609375);
+curveVertex(565.5, 274.609375);
+curveVertex(555.5, 264.609375);
+curveVertex(545.5, 255.609375);
+curveVertex(536.5, 251.609375);
+curveVertex(525.5, 249.609375);
+curveVertex(512.5, 250.609375);
+endShape(CLOSE);
+
+beginShape();//boca
+  fill(0, 0, 0)
+vertex(402.44791412353516, 380.0069580078125);
+vertex(483.44791412353516, 378.0069580078125);
+endShape();
+  
+beginShape();//cella esquerre
+  fill(0, 0, 0)
+vertex(478.44791412353516, 219.2291660308838);
+vertex(478.44791412353516, 228.2291660308838);
+vertex(488.44791412353516, 228.2291660308838);
+vertex(497.44791412353516, 228.2291660308838);
+vertex(508.44791412353516, 230.2291660308838);
+vertex(522.4479141235352, 233.2291660308838);
+vertex(540.4479141235352, 237.2291660308838);
+vertex(530.4479141235352, 229.2291660308838);
+vertex(521.4479141235352, 224.2291660308838);
+vertex(510.44791412353516, 221.2291660308838);
+vertex(497.44791412353516, 218.2291660308838);
+vertex(485.44791412353516, 217.2291660308838);
+vertex(477.44791412353516, 217.2291660308838);
+endShape();
+  
+beginShape();//cella dreta
+  fill(0, 0, 0)
+vertex(394.44791412353516, 216.22916793823242);
+vertex(395.44791412353516, 225.22916793823242);
+vertex(384.44791412353516, 227.22916793823242);
+vertex(372.44791412353516, 230.22916793823242);
+vertex(360.44791412353516, 235.22916793823242);
+vertex(346.44791412353516, 243.22916793823242);
+vertex(354.44791412353516, 229.22916793823242);
+vertex(368.44791412353516, 221.22916793823242);
+vertex(380.44791412353516, 218.22916793823242);
+vertex(390.44791412353516, 216.22916793823242);
+endShape();
+
+beginShape();//cama dreta
+  fill(87, 134, 43)
+curveVertex(397.5, 652.609375);
+curveVertex(395.5, 665.609375);
+curveVertex(395.5, 677.609375);
+curveVertex(394.5, 693.609375);
+curveVertex(393.5, 708.609375);
+curveVertex(394.5, 727.609375);
+curveVertex(387.5, 727.609375);
+curveVertex(382.5, 732.609375);
+curveVertex(381.5, 738.609375);
+curveVertex(381.5, 753.609375);
+curveVertex(378.5, 770.609375);
+curveVertex(385.5, 773.609375);
+curveVertex(393.5, 778.609375);
+curveVertex(398.5, 780.609375);
+curveVertex(388.5, 777.609375);
+curveVertex(377.5, 774.609375);
+curveVertex(367.5, 774.609375);
+curveVertex(359.5, 781.609375);
+curveVertex(351.5, 789.609375);
+curveVertex(351.5, 799.609375);
+curveVertex(352.5, 808.609375);
+curveVertex(359.5, 815.609375);
+curveVertex(366.5, 820.609375);
+curveVertex(377.5, 827.609375);
+curveVertex(391.5, 828.609375);
+curveVertex(402.5, 828.609375);
+curveVertex(416.5, 828.609375);
+curveVertex(430.5, 825.609375);
+curveVertex(444.5, 820.609375);
+curveVertex(453.5, 811.609375);
+curveVertex(453.5, 793.609375);
+curveVertex(450.5, 781.609375);
+curveVertex(447.5, 765.609375);
+curveVertex(438.5, 752.609375);
+curveVertex(440.5, 742.609375);
+curveVertex(440.5, 731.609375);
+curveVertex(433.5, 725.609375);
+curveVertex(430.5, 716.609375);
+curveVertex(429.5, 706.609375);
+curveVertex(429.5, 696.609375);
+curveVertex(431.5, 681.609375);
+curveVertex(431.5, 669.609375);
+curveVertex(430.5, 657.609375);
+endShape();
+  
+beginShape();//cama esquerre
+  fill(87, 134, 43)
+curveVertex(496.5, 663.609375);
+curveVertex(498.5, 678.609375);
+curveVertex(498.5, 695.609375);
+curveVertex(499.5, 709.609375);
+curveVertex(498.5, 724.609375);
+curveVertex(493.5, 729.609375);
+curveVertex(489.5, 732.609375);
+curveVertex(487.5, 742.609375);
+curveVertex(492.5, 749.609375);
+curveVertex(485.5, 758.609375);
+curveVertex(482.5, 769.609375);
+curveVertex(480.5, 780.609375);
+curveVertex(479.5, 794.609375);
+curveVertex(479.5, 810.609375);
+curveVertex(497.5, 821.609375);
+curveVertex(521.5, 828.609375);
+curveVertex(541.5, 828.609375);
+curveVertex(555.5, 828.609375);
+curveVertex(569.5, 823.609375);
+curveVertex(577.5, 815.609375);
+curveVertex(580.5, 802.609375);
+curveVertex(578.5, 787.609375);
+curveVertex(568.5, 777.609375);
+curveVertex(550.5, 773.609375);
+curveVertex(533.5, 776.609375);
+curveVertex(551.5, 771.609375);
+curveVertex(549.5, 764.609375);
+curveVertex(545.5, 750.609375);
+curveVertex(550.5, 741.609375);
+curveVertex(546.5, 731.609375);
+curveVertex(536.5, 724.609375);
+curveVertex(536.5, 709.609375);
+curveVertex(535.5, 691.609375);
+curveVertex(535.5, 678.609375);
+curveVertex(533.5, 660.609375);
+endShape();
+  
+beginShape();//detall de la bamba
+curveVertex(340.5, 809.609375);
+curveVertex(360.5, 814.609375);
+curveVertex(375.5, 815.609375);
+curveVertex(391.5, 817.609375);
+curveVertex(407.5, 817.609375);
+curveVertex(423.5, 815.609375);
+curveVertex(438.5, 808.609375);
+curveVertex(448.5, 806.609375);
+curveVertex(458.5, 800.609375);
+curveVertex(465.5, 794.609375);
+endShape();
+  
+beginShape();//detall de la bamba
+curveVertex(470.5, 797.609375);
+curveVertex(485.5, 806.609375);
+curveVertex(497.5, 813.609375);
+curveVertex(512.5, 817.609375);
+curveVertex(528.5, 817.609375);
+curveVertex(538.5, 817.609375);
+curveVertex(554.5, 815.609375);
+curveVertex(566.5, 814.609375);
+curveVertex(577.5, 814.609375);
+curveVertex(587.5, 811.609375);
+endShape();
+  
+beginShape();//detall de la bamba
+    fill(254, 253, 219)
+curveVertex(470.5, 797.609375);
+curveVertex(485.5, 806.609375);
+curveVertex(497.5, 813.609375);
+curveVertex(512.5, 817.609375);
+curveVertex(528.5, 817.609375);
+curveVertex(538.5, 817.609375);
+curveVertex(554.5, 815.609375);
+curveVertex(566.5, 814.609375);
+curveVertex(577.5, 814.609375);
+curveVertex(587.5, 811.609375);
+curveVertex(576.5, 814.609375);
+curveVertex(565.5, 814.609375);
+curveVertex(555.5, 814.609375);
+curveVertex(539.5, 817.609375);
+curveVertex(527.5, 817.609375);
+curveVertex(512.5, 816.609375);
+curveVertex(495.5, 812.609375);
+curveVertex(485.5, 806.609375);
+curveVertex(474.5, 797.609375);
+curveVertex(461.5, 790.609375);
+endShape();
+  
+beginShape();//pupila de l'ull dret
+  fill(0, 0, 0)
+curveVertex(363.5, 267.609375);
+curveVertex(349.5, 275.609375);
+curveVertex(339.5, 286.609375);
+curveVertex(336.5, 300.609375);
+curveVertex(338.5, 315.609375);
+curveVertex(344.5, 328.609375);
+curveVertex(356.5, 338.609375);
+curveVertex(366.5, 343.609375);
+curveVertex(379.5, 343.609375);
+curveVertex(394.5, 341.609375);
+curveVertex(403.5, 335.609375);
+curveVertex(410.5, 327.609375);
+curveVertex(414.5, 316.609375);
+curveVertex(415.5, 304.609375);
+curveVertex(415.5, 294.609375);
+curveVertex(412.5, 284.609375);
+curveVertex(405.5, 274.609375);
+curveVertex(395.5, 267.609375);
+curveVertex(384.5, 265.609375);
+curveVertex(371.5, 264.609375);
+curveVertex(364.5, 267.609375);
+endShape(CLOSE);
+  
+beginShape();//pupila d'ull esquerre
+  fill(0, 0, 0)
+curveVertex(486.5, 270.609375);
+curveVertex(497.5, 266.609375);
+curveVertex(512.5, 265.609375);
+curveVertex(526.5, 267.609375);
+curveVertex(538.5, 273.609375);
+curveVertex(545.5, 285.609375);
+curveVertex(548.5, 301.609375);
+curveVertex(549.5, 318.609375);
+curveVertex(541.5, 332.609375);
+curveVertex(533.5, 341.609375);
+curveVertex(519.5, 346.609375);
+curveVertex(507.5, 346.609375);
+curveVertex(495.5, 345.609375);
+curveVertex(482.5, 338.609375);
+curveVertex(476.5, 329.609375);
+curveVertex(470.5, 320.609375);
+curveVertex(468.5, 307.609375);
+curveVertex(472.5, 290.609375);
+curveVertex(477.5, 278.609375);
+curveVertex(489.5, 269.609375);
 endShape(CLOSE);
 }
     }
